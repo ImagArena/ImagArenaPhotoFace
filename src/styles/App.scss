@@ -1,0 +1,44 @@
+/* Base Application Styles */
+body {
+  color: #fff;
+  background: #222;
+}
+
+.index{
+	h2 {
+		font-size: 40px;
+	}
+
+	img {
+		width: 20%;
+	}
+
+}
+
+.modal-dialog {
+	img {
+		width: 100%;
+	}
+	.close {
+		position: absolute;
+		color: white;
+		font-size: 50px;
+		top: -10px;
+		opacity: 0.8;
+		text-decoration: none !important;
+		right: 15px;
+	}
+	.close:hover {
+		text-decoration: none;
+		opacity: 1;
+	}
+}
+
+.index .notice {
+  margin: 20px auto;
+  padding: 15px 0;
+  text-align: center;
+  border: 1px solid #000;
+  border-width: 1px 0;
+  background: #666;
+}
