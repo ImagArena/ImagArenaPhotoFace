@@ -1,0 +1,22 @@
+{
+  "name": "blah",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Elliot Berman",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.40.0",
+    "babel": "5.8.23",
+    "body-parser": "^1.15.2",
+    "busboy": "^0.2.13",
+    "connect-busboy": "0.0.2",
+    "express": "^4.14.0",
+    "fs-extra": "^0.30.0",
+    "jsonfile": "^2.4.0",
+    "nodemon": "^1.10.0",
+    "path": "^0.12.7",
+    "s3": "^4.4.0"
+  }
+}

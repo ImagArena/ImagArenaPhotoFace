@@ -5,12 +5,39 @@ body {
 }
 
 .index{
+	#loading-indicator {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: 800ms ease-in;
+		background: #202125;
+		color: #e0e0e0;
+		top: 0;
+		margin: 0 auto;
+		font-size: 140px;
+		letter-spacing: -5px;
+		pointer-events: none;
+
+		&.on {
+			opacity: 1;
+		}
+	}
 	h2 {
 		font-size: 40px;
 	}
 
 	img {
 		width: 20%;
+		cursor: pointer;
+		opacity: 1;
+		transition: 200ms;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 
 }

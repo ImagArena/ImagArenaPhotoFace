@@ -65,12 +65,13 @@
     "postcss-loader": "^0.8.0"
   },
   "dependencies": {
-    "aws-sdk": "^2.6.12",
+    "axios": "^0.16.1",
     "babel-preset-stage-0": "^6.16.0",
     "core-js": "^2.0.0",
     "normalize.css": "^4.0.0",
     "react": "^0.14.0",
     "react-bootstrap": "^0.30.6",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "react-router": "^2.6.0"
   }
 }
