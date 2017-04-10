@@ -5,6 +5,7 @@ require('styles/bootstrap.css');
 import React from 'react';
 import {Modal} from 'react-bootstrap';
 import Axios from 'axios';
+import titlecase from 'titlecase';
 
 class Photos extends React.Component {
 
@@ -58,6 +59,12 @@ class Photos extends React.Component {
 			return !this.state.weeks ? 'on' : null;
 		}
 
+		const title = (name) => {
+			name = name.split("_");
+			name = name.join(" ");
+			return titlecase.toTitleCase(name)
+		}
+
 
 		const modalInstance = (
 		  <div className="static-modal">
@@ -71,7 +78,7 @@ class Photos extends React.Component {
     return (
       <div className="index">
 				<h1 id="loading-indicator" className={loading()}>Loading...</h1>
-				<h1 id="group-name"></h1>
+				<h1 id="group-name">{title(this.props.params.groupName)}</h1>
 				{modalInstance}
 				{weeks}
       </div>
