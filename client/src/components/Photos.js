@@ -69,7 +69,7 @@ class Photos extends React.Component {
 		const modalInstance = (
 		  <div className="static-modal">
 				<Modal show={this.state.showModal} onHide={this.close}>
-					<a href="#" className="close" onClick={this.close}>×</a>
+					<a role="button" className="close" onClick={this.close}>×</a>
 			    <img src={this.state.photo} />
 				</Modal>
 		  </div>
