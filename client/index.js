@@ -1,33 +1,10 @@
 var express = require('express');
-var webpack = require('webpack');
-var webpackMiddleware = require('webpack-dev-middleware');
-var webpackHotMiddleware = require('webpack-hot-middleware');
-
-var config = require('./webpack.config.js');
 
 const host = '0.0.0.0';
-const port = '7575';
+const port = '8000';
 
 const app = express();
-
-const compiler = webpack(config);
-const middleware = webpackMiddleware(compiler, {
-	publicPath: config.output.publicPath,
-	contentBase: 'src',
-	stats: {
-		colors: true,
-		hash: false,
-		timings: true,
-		chunks: false,
-		chunkModules: false,
-		modules: false
-	}
-});
-
-app.use(middleware);
-app.use(webpackHotMiddleware(compiler));
-
-app.get('*', (req, res) => res.sendFile(__dirname + '/index.html'));
+app.use(express.static(__dirname))
 
 app.listen(port, host, (err) => {
 	if(err) console.log(err);
