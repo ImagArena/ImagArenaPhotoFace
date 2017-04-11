@@ -56,7 +56,8 @@ class Photos extends React.Component {
 					<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={title(this.state.groupName)} placeholder="Choose Group" />
 					{this.state.groupName ? <Link className="link-button" to={"/photos/" + this.state.groupName}>Go</Link> : null }
 
-      </div>
+				</div>
+			</div>
     );
   }
 }
