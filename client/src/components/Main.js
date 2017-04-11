@@ -30,7 +30,7 @@ class Photos extends React.Component {
 	}
 
 	componentDidMount = () => {
-		Axios.get('http://localhost:3001/get_groupnames/').then(
+		Axios.get('http://ec2-34-223-254-57.us-west-2.compute.amazonaws.com:3001/get_groupnames/').then(
 			function success(response) {
 				this.setState({
 					groups: response.data.map(function(x) {return {label: title(x), value: x}})
@@ -55,7 +55,7 @@ class Photos extends React.Component {
 					<h2>Choose Group Name</h2>
 					<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={title(this.state.groupName)} placeholder="Choose Group" />
 					{this.state.groupName ? <Link className="link-button" to={"/photos/" + this.state.groupName}>Go</Link> : null }
-				</div>
+
       </div>
     );
   }
