@@ -53,7 +53,35 @@ const getS3Files = (req, res) => {
 
 }
 
+const getGroupNames = (req, res) => {
+	let params = {
+		Bucket: 'imagarenaphotos',
+		Delimiter: '/',
+	}
+
+	let promise = new Promise((resolve, reject) => {
+		s3.listObjects(params, function (err, data) {
+			if (err) {
+				throw err;
+				reject(err);
+			}
+			else {
+				console.log(data);
+				let groups = data.CommonPrefixes.map(function(x) {
+					return x.Prefix.replace("/", "");
+				});
+				resolve(groups);
+			}
+		});
+	});
+
+	return promise.then((groups) => {
+		return groups;
+	});;
+}
+
 app.post('/get_class_photos', (req, res) => getS3Files(req, res).then( (weeks) => res.send(weeks) ) );
+app.get('/get_groupnames', (req, res) => getGroupNames(req, res).then( (groups) => res.send(groups) ) );
 
 var server = app.listen(3001,  () => {
     var host = server.address().address;

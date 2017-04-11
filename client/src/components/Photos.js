@@ -78,7 +78,7 @@ class Photos extends React.Component {
     return (
       <div className="index">
 				<h1 id="loading-indicator" className={loading()}>Loading...</h1>
-				<h1 id="group-name">{title(this.props.params.groupName)}</h1>
+				<h1 id="group-name" className="main-header">{title(this.props.params.groupName)}</h1>
 				{modalInstance}
 				{weeks}
       </div>

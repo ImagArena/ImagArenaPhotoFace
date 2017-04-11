@@ -1,7 +1,36 @@
-/* Base Application Styles */
+// Photo Grid
 body {
   color: #fff;
   background: #222;
+}
+
+.container {
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.link-button {
+	padding: 10px 50px;
+	background: #333333;
+	color: white;
+	margin-top: 20px;
+	display: inline-block;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+	transition: 100ms;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: white !important;
+
+	&:hover {
+		opacity: 0.7;
+
+	}
+}
+
+.Dropdown-root {
+	max-width: 300px;
 }
 
 .index{
@@ -27,11 +56,13 @@ body {
 		}
 	}
 
-	#group-name {
+
+	.main-header {
 		font-size: 80px;
 		padding-bottom: 10px;
 		margin-bottom: 40px;
 		border-bottom: 10px solid #333333;
+		margin-top: 0;
 	}
 	h2 {
 		font-size: 40px;
