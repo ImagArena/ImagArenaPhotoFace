@@ -1,45 +1,16 @@
 require('normalize.css/normalize.css');
 require('styles/App.scss');
-require('styles/bootstrap.css');
-require('../../node_modules/react-dropdown/style.css');
+require('styles/tim.scss');
 
 import React from 'react';
-import { Link }from 'react-router';
-
-import Axios from 'axios';
-import titlecase from 'titlecase';
-import Dropdown from 'react-dropdown';
-
-const title = (name) => {
-	if (name) {
-		name = name.split("_");
-		name = name.join(" ");
-		return titlecase.toTitleCase(name);
-	}
-}
+import { Link } from 'react-router';
+import NavLink from './NavLink';
 
 
-class Photos extends React.Component {
+class Main extends React.Component {
 
 	constructor() {
 		super();
-		this.state = {
-			groups: [],
-			groupName: null
-		}
-	}
-
-	componentDidMount = () => {
-		Axios.get('http://ec2-34-223-254-57.us-west-2.compute.amazonaws.com:3001/get_groupnames/').then(
-			function success(response) {
-				this.setState({
-					groups: response.data.map(function(x) {return {label: title(x), value: x}})
-				});
-			}.bind(this),
-			function error(response) {
-				console.log(response);
-			}
-		);
 	}
 
 	chooseGroupName = (option) => {
@@ -47,20 +18,38 @@ class Photos extends React.Component {
 	}
 
   render = () => {
-		const defaultOption = this.state.groups[0];
     return (
-      <div className="index">
-				<h1 id="group-name" className="main-header">Imagarena Photos</h1>
-				<div className="container">
-					<h2>Choose Group Name</h2>
-					<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={title(this.state.groupName)} placeholder="Choose Group" />
-					{this.state.groupName ? <Link className="link-button" to={"/photos/" + this.state.groupName}>Go</Link> : null }
-
+      <div className="main">
+			<nav id="imagarena-nav" className="navbar navbar-default navbar-fixed-top">
+			<div className="container-fluid">
+				<div className="navbar-header">
+					<button type="button" className="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+						<span className="sr-only">Toggle navigation</span>
+						<span className="icon-bar"></span>
+						<span className="icon-bar"></span>
+						<span className="icon-bar"></span>
+					</button>
+					<Link to="/" className="navbar-brand">
+						<img src='http://imagarenastatic.s3.amazonaws.com/logo.svg' />
+					</Link>
 				</div>
+				<div className="collapse navbar-collapse">
+					<ul className="nav navbar-nav navbar-right">
+						<NavLink to="/programs">Programs</NavLink>
+						<NavLink to="/about">About</NavLink>
+						<NavLink to="/contact">Contact</NavLink>
+
+						<li className="pill-boy"><Link to="/creations" id="creations">Creations</Link></li>
+						<li className="pill-boy"><Link to="/materials" id="materials">Materials</Link></li>
+					</ul>
+				</div>
+			</div>
+			</nav>
+				{this.props.children}
 			</div>
     );
   }
 }
 
 
-export default Photos;
+export default Main;

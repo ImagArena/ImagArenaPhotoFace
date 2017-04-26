@@ -66,7 +66,6 @@ const getGroupNames = (req, res) => {
 				reject(err);
 			}
 			else {
-				console.log(data);
 				let groups = data.CommonPrefixes.map(function(x) {
 					return x.Prefix.replace("/", "");
 				});

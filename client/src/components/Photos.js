@@ -1,7 +1,7 @@
 require('normalize.css/normalize.css');
 require('styles/App.scss');
-require('styles/bootstrap.css');
 
+import path from 'path';
 import React from 'react';
 import {Modal} from 'react-bootstrap';
 import Axios from 'axios';
@@ -48,7 +48,7 @@ class Photos extends React.Component {
 		let weeks = [];
 		for (let i in this.state.weeks) {
 			if (this.state.weeks[i].length) {
-				weeks.push([<h2>Week {Number(i) + 1}</h2>]);
+				weeks.push([<h2 className="level-number">Level {Number(i) + 1}</h2>]);
 				for (let h in this.state.weeks[i]) {
 					weeks[i].push(<img onClick={() => this.open(this.state.weeks[i][h])} src={this.state.weeks[i][h]} key={this.state.weeks[i][h]}></img>);
 				}
@@ -77,7 +77,10 @@ class Photos extends React.Component {
 
     return (
       <div className="index">
-				<h1 id="loading-indicator" className={loading()}>Loading...</h1>
+				<h1 className="banner-title creations">Creations</h1>
+				<div id="loading-indicator" className={loading()}>
+					<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
+				</div>
 				<h1 id="group-name" className="main-header">{title(this.props.params.groupName)}</h1>
 				{modalInstance}
 				{weeks}
