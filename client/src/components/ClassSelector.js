@@ -36,13 +36,20 @@ class ClassSelector extends Component {
 	}
 
 	chooseGroupName = (option) => {
-		browserHistory.push('/creations/' + option.value);
+		if (this.props.reload) {
+			window.location.href = '/creations/' + option.value;
+		}
+		else {
+			browserHistory.push('/creations/' + option.value);
+		}
 	}
 
     render = () => {
-			const defaultOption = this.state.groups[0];
 			return (
-				<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={title(this.state.groupName)} placeholder="Choose Group" />
+				<div className='Dropdown-container'>
+					<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={this.props.default} placeholder="Choose Group" />
+				</div>
+
 			)
     }
 }

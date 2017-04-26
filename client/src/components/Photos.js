@@ -18,7 +18,8 @@ class Photos extends React.Component {
 			showModal: false,
 			currentLevel: 0,
 			currentPhoto: 0,
-			levels: [[]]
+			levels: [[]],
+			loaded: false
 		 };
 	}
 
@@ -32,10 +33,9 @@ class Photos extends React.Component {
 			      i--;
 			    }
 			  }
-
-
 				this.setState({
-					levels: levels
+					levels: levels,
+					loaded: true
 				});
 			}.bind(this),
 			function error(response) {
@@ -43,6 +43,7 @@ class Photos extends React.Component {
 			}
 		);
 	}
+
 
 	close = () => {
 		this.setState({ showModal: false });
@@ -102,7 +103,7 @@ class Photos extends React.Component {
 		}
 
 		const loading = () => {
-			return !this.state.levels ? 'on' : null;
+			return !this.state.loaded ? 'on' : null;
 		}
 
 		const title = (name) => {
@@ -123,14 +124,23 @@ class Photos extends React.Component {
 		  </div>
 		);
 
+		const defaultOption = {
+			label: title(this.props.params.groupName),
+			value: this.props.params.groupName
+		}
+
     return (
-      <div className="index">
+
+      <div className="index mosaic">
 				<h1 className="banner-title creations">Creations</h1>
 				<div id="loading-indicator" className={loading()}>
 					<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
 				</div>
+
+				<ClassSelector default={defaultOption} reload={true} />
+
 				<h1 id="group-name" className="main-header">{title(this.props.params.groupName)}</h1>
-				<ClassSelector />
+
 				{modalInstance}
 				{levels}
       </div>

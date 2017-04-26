@@ -29,10 +29,20 @@ body {
 	margin-bottom: 30px;
 }
 
-.Dropdown-root {
-	max-width: 300px;
+.Dropdown-container {
+	width: 100%;
+	float: left;
+}
+	.mosaic .Dropdown-container {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+.Dropdown-control {
+	max-width: 400px;
 	margin: 0 auto;
 }
+
 
 .index{
 	#loading-indicator {
@@ -73,6 +83,7 @@ body {
 		float: left;
 		width: 100%;
 	}
+
 	h2 {
 		float: left;
 		font-size: 40px;
@@ -163,7 +174,4 @@ body {
 	padding-bottom: 15px;
 	text-transform: uppercase;
 
-	&:first-of-type {
-		margin-top: 60px;
-	}
 }
