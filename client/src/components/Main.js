@@ -23,7 +23,7 @@ class Main extends React.Component {
 			<nav id="imagarena-nav" className="navbar navbar-default navbar-fixed-top">
 			<div className="container-fluid">
 				<div className="navbar-header">
-					<button type="button" className="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+					<button type="button" className="collapsed navbar-toggle" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
 						<span className="sr-only">Toggle navigation</span>
 						<span className="icon-bar"></span>
 						<span className="icon-bar"></span>
@@ -33,7 +33,7 @@ class Main extends React.Component {
 						<img src='http://imagarenastatic.s3.amazonaws.com/logo.svg' />
 					</Link>
 				</div>
-				<div className="collapse navbar-collapse">
+				<div id="collapse" className="collapse navbar-collapse">
 					<ul className="nav navbar-nav navbar-right">
 						<NavLink to="/programs">Programs</NavLink>
 						<NavLink to="/about">About</NavLink>
