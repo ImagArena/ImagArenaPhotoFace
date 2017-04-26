@@ -52,12 +52,8 @@ class Choose extends React.Component {
     return (
       <div className="index">
 				<h1 className="banner-title creations">Creations</h1>
-				<h1 id="group-name" className="main-header">Imagarena Creations</h1>
-
 						<h2 className="choose-header">Choose Group Name</h2>
 						<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={title(this.state.groupName)} placeholder="Choose Group" />
-						{/* {this.state.groupName ? <Link className="link-button" to={"/creations/" + this.state.groupName}>Go</Link> : null } */}
-
 			</div>
     );
   }

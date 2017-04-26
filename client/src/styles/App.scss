@@ -89,7 +89,20 @@ body {
 
 }
 
+.modal-backdrop.in {
+    filter: alpha(opacity=85);
+    opacity: 0.85;
+}
+
 .modal-dialog {
+	display: flex !important;
+	align-items: center;
+	height: 100%;
+
+	@media (min-width: 768px) {
+		width: 75%;
+	}
+
 	img {
 		width: 100%;
 	}

@@ -40,7 +40,6 @@ class Photos extends React.Component {
 			showModal: true,
 			photo: url
 		});
-		console.log(url);
 	}
 
   render = () => {
