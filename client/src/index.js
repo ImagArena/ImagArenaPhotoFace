@@ -8,6 +8,7 @@ import Home from './components/Home';
 import Programs from './components/Programs';
 import About from './components/About';
 import Contact from './components/Contact';
+import Materials from './components/Materials';
 
 
 import Choose from './components/Choose';
@@ -22,6 +23,7 @@ ReactDOM.render((
 		<Route path='programs' component={Programs}></Route>
 		<Route path='about' component={About}></Route>
 		<Route path='contact' component={Contact}></Route>
+		<Route path='materials' component={Materials}></Route>
 
 		<Route path='creations' component={Choose} />
 		<Route path='creations/:groupName' component={Photos}/>
