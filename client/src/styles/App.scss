@@ -52,6 +52,7 @@ body {
 		font-size: 140px;
 		letter-spacing: -5px;
 		pointer-events: none;
+		z-index: 2;
 
 		img {
 			width: 50%;
@@ -64,7 +65,7 @@ body {
 
 
 	.main-header {
-		font-size: 80px;
+		font-size: 90px;
 		padding-bottom: 10px;
 		margin-bottom: 40px;
 		margin-top: 20px;
@@ -106,18 +107,34 @@ body {
 	img {
 		width: 100%;
 	}
-	.close {
-		position: absolute;
+	.glyphicon, .close {
 		color: white;
-		font-size: 50px;
-		top: -10px;
 		opacity: 0.8;
+		position: absolute;
+
+		&:hover {
+			text-decoration: none;
+			opacity: 1;
+		}
+	}
+	.glyphicon {
+		font-size: 50px;
+		top: 45%;
+
+		&.glyphicon-chevron-left {
+			left: -50px;
+		}
+		&.glyphicon-chevron-right {
+			right: -50px;
+		}
+	}
+
+	.close {
+		font-size: 90px;
+		top: -10px;
 		text-decoration: none !important;
 		right: 15px;
-	}
-	.close:hover {
-		text-decoration: none;
-		opacity: 1;
+		font-size: 75px;
 	}
 }
 
@@ -139,4 +156,8 @@ body {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	text-transform: uppercase;
+
+	&:first-of-type {
+		margin-top: 60px;
+	}
 }
