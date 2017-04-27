@@ -125,7 +125,6 @@ body {
 	width: 100%;
 	color: white;
 	text-align: center;
-	background: #00a651;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	text-transform: uppercase;
@@ -135,7 +134,12 @@ body {
 }
 
 .banner-title.creations {
-	background: #00aeef;
+	background-color: #00aeef;
+}
+
+.banner-title.materials {
+	background-color: #00a651;
+	margin-bottom: 0;
 }
 
 .banner-subtitle-material {
@@ -147,6 +151,7 @@ body {
   background: #C0C0C0;
 	font-size: 16px;
   font-weight: 400;
+	float: left;
 }
 
 .banner-footer {
