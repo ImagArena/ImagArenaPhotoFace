@@ -132,14 +132,15 @@ class Photos extends React.Component {
     return (
 
       <div className="index mosaic">
-				<h1 className="banner-title creations">Creations</h1>
+				<h1 className="banner-title creations"><strong>Creations</strong></h1>
+				<p className="banner-subtitle-material">ImagArena® activities feature open-ended building systems that encourage exploration and imaginative play. </p>
 				<div id="loading-indicator" className={loading()}>
 					<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
 				</div>
 
 				<ClassSelector default={defaultOption} reload={true} />
 
-				<h1 id="group-name" className="main-header">{title(this.props.params.groupName)}</h1>
+				<h3 id="group-name" className="main-header">{title(this.props.params.groupName)}</h3>
 
 				{modalInstance}
 				{levels}
