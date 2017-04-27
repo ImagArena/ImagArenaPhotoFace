@@ -72,15 +72,22 @@ body {
 		pointer-events: none;
 		z-index: 2;
 
-		img {
-			position: relative;
-			margin-top: 80px;
-			width: 50%;
-			height: auto;
-		}
-
 		&.on {
 			opacity: 1;
+		}
+
+		.loading-container {
+			width: 100%;
+			text-align: center;
+
+			img {
+				position: relative;
+				margin-top: 80px;
+				width: 50%;
+				min-width: 300px;
+				height: auto;
+				display: inline;
+			}
 		}
 	}
 

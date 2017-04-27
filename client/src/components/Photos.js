@@ -140,7 +140,10 @@ class Photos extends React.Component {
 
 				<div className="mosaic-container">
 					<div id="loading-indicator" className={loading()}>
-						<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
+						<div className="loading-container">
+							<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
+						</div>
+
 					</div>
 
 					<ClassSelector default={defaultOption} reload={true} />
