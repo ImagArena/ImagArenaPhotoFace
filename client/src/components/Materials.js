@@ -15,7 +15,7 @@ class Materials extends React.Component {
       <div className="index">
 				<h1 className="banner-title materials"><strong>Materials</strong></h1>
 				<p className="banner-subtitle-material">ImagArena® activities feature open-ended building systems that encourage exploration and imaginative play. </p>
-				<div className="container-fluid-materials">
+				<div className="container-fluid container-fluid-materials">
       <div className="row">
         <div className="col-sm-2 col-md-2 productcell">
           <img src={require('../images/store/brainflake.gif')} className="img-responsive product" alt="Responsive image" />
