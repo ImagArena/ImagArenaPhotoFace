@@ -1,6 +1,7 @@
 require('normalize.css/normalize.css');
 require('styles/App.scss');
 
+import { Link } from 'react-router';
 import React from 'react';
 
 
@@ -28,7 +29,8 @@ class Programs extends React.Component {
 		              <img src={'../images/programs_6week.png'} className="img-responsive" alt="Responsive image" />
 		          </div>
 		          <div className="col-lg-6 col-lg-offset-3">
-		              <p className="text-left">ImagArena® 6 Week is a total imagination experience.  Participants create with over 30 different building <a id="materials-text" href="materials_v1.html">MATERIALS</a>, and over the course of 6 sessions they discover the power of their imagination while learning strategies for overcoming creative blocks and working in teams.  After each session photos of participants work are posted online for family and friends to view, and by checking out the <a id="creations-text" href="creations.html">CREATIONS</a> page you can get an inside glimpse of what it’s like inside an ImagArena® 6 Week program.  </p>
+		              <p className="text-left">ImagArena® 6 Week is a total imagination experience.  Participants create with over 30 different building <Link id="materials-text" to="/materials">MATERIALS</Link>, and over the course of 6 sessions they discover the power of their imagination while learning strategies for overcoming creative blocks and working in teams.  After each session photos of participants work are posted online for family and friends to view, and by checking out the
+										<Link id="creations-text" to="/creations">CREATIONS</Link> page you can get an inside glimpse of what it’s like inside an ImagArena® 6 Week program.  </p>
 		              <br />
 		              <h4 className="text-left"><strong>Duration:</strong> (6) 45 Minute Sessions</h4>
 		              <h4 className="text-left"><strong>Min / Max group size:</strong> 5-20</h4>

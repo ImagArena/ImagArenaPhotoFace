@@ -1,6 +1,7 @@
 require('normalize.css/normalize.css');
 require('styles/App.scss');
 
+import { Link } from 'react-router';
 import React from 'react';
 
 
@@ -41,7 +42,7 @@ class About extends React.Component {
 					</div>
 					<div className="col-md-4">
 							<h3><strong>Curated Materials</strong></h3>
-							<p className="text-left">The materials used in ImagArena® activities are carefully chosen to allow for <strong>unrestricted imaginative expression</strong>.<br /><br />Drawing from a vast library of <strong>three-dimensional building materials</strong>, ImagArena activities are hands on and focused on the <strong>rapid creation</strong> and recycling of ideas.  Check out the <a id="materials-text" href="materials_v1.html">MATERIALS</a> page for some examples of the materials used in the ImagArena®.
+							<p className="text-left">The materials used in ImagArena® activities are carefully chosen to allow for <strong>unrestricted imaginative expression</strong>.<br /><br />Drawing from a vast library of <strong>three-dimensional building materials</strong>, ImagArena activities are hands on and focused on the <strong>rapid creation</strong> and recycling of ideas.  Check out the <Link id="materials-text" to="/materials">MATERIALS</Link> page for some examples of the materials used in the ImagArena®.
 			</p>
 					</div>
 				</div>
