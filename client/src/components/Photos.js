@@ -120,7 +120,7 @@ class Photos extends React.Component {
 					<span role="button" className="glyphicon glyphicon-chevron-left" onClick={this.prev}></span>
 			    <img src={this.state.levels[this.state.currentLevel][this.state.currentPhoto]} />
 					<span role="button" className="glyphicon glyphicon-chevron-right" onClick={this.next}></span>
-					<a href={this.state.levels[this.state.currentLevel][this.state.currentPhoto]} role="button" className="glyphicon glyphicon-floppy-save" onClick={this.download} download></a>
+					<a href={this.state.levels[this.state.currentLevel][this.state.currentPhoto]} role="button" className="glyphicon glyphicon-save" onClick={this.download} download></a>
 				</Modal>
 		  </div>
 		);
