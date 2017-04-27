@@ -27,7 +27,27 @@
 	margin-top: 0px;
 }
 
+.navbar-toggle {
+	margin-top: 13px;
+  margin-bottom: 13px;
+}
 
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	background-color: white;
+
+	.icon-bar {
+		background-color: black;
+	}
+}
+
+.navbar-nav {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 
 .navbar-nav>li>a {
 	padding-top: 20px;
@@ -68,12 +88,7 @@
 	background: white;
 }
 
-#imagarena-nav .pill-boy {
-	margin-right: 10px;
-}
-
-
-#imagarena-nav .pill-boy a, #materials-text, #creations-text {
+#materials-text, #creations-text {
 	border-radius: 50px;
   padding: 5px 10px;
 }
@@ -138,6 +153,7 @@
 	background-color: #00aeef;
   z-index: 3;
 	position: absolute;
+	top: 60px;
 
 }
 
