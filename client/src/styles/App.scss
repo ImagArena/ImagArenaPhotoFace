@@ -165,7 +165,7 @@ body {
 		}
 	}
 	.glyphicon {
-		top: 45%;
+		top: 40%;
 		font-size: 30px;
 
 		&.glyphicon-chevron-left {
@@ -176,13 +176,13 @@ body {
 		}
 
 		&.glyphicon-save {
-			right: 18px;
+			right: 2px;
 			top: auto;
-			bottom: 0px;
-			font-size: 45px;
+			bottom: 5px;
 		}
 
 		@media (min-width: 768px) {
+			top: 45%;
 			font-size: 70px;
 			&.glyphicon-chevron-left {
 				left: -70px;
@@ -191,8 +191,9 @@ body {
 				right: -70px;
 			}
 			&.glyphicon-save {
-				right: 15px;
-				bottom: 10px;
+				right: 18px;
+				bottom: 15px;
+				font-size: 45px;
 			}
 		}
 
