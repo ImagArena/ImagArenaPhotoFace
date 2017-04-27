@@ -25,6 +25,13 @@
 
 .index > .container-fluid-materials {
 	margin-top: 0px;
+
+	.row:first-of-type {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		flex-wrap: wrap;
+	}
 }
 
 .navbar-toggle {
@@ -293,8 +300,13 @@ footer {
 	h2.text-center {
 		font-size: 20px;
 
+		@media (min-width: 768px) {
+			font-size: 22px;
+		}
+
 		@media (min-width: 1000px) {
 			font-size: 30px;
+			min-height: 80px;
 		}
 	}
 }
