@@ -26,11 +26,10 @@ class Programs extends React.Component {
 
 		        <div className="row">
 		          <div className="col-lg-6 col-lg-offset-3">
-		              <img src={'../images/programs_6week.png'} className="img-responsive" alt="Responsive image" />
+		              <img src={require('../images/programs_6week.png')} className="img-responsive" alt="Responsive image" />
 		          </div>
 		          <div className="col-lg-6 col-lg-offset-3">
-		              <p className="text-left">ImagArena® 6 Week is a total imagination experience.  Participants create with over 30 different building <Link id="materials-text" to="/materials">MATERIALS</Link>, and over the course of 6 sessions they discover the power of their imagination while learning strategies for overcoming creative blocks and working in teams.  After each session photos of participants work are posted online for family and friends to view, and by checking out the
-										<Link id="creations-text" to="/creations">CREATIONS</Link> page you can get an inside glimpse of what it’s like inside an ImagArena® 6 Week program.  </p>
+		              <p className="text-left">ImagArena® 6 Week is a total imagination experience.  Participants create with over 30 different building <Link id="materials-text" to="/materials">MATERIALS</Link>, and over the course of 6 sessions they discover the power of their imagination while learning strategies for overcoming creative blocks and working in teams.  After each session photos of participants work are posted online for family and friends to view, and by checking out the <Link id="creations-text" to="/creations">CREATIONS</Link> page you can get an inside glimpse of what it’s like inside an ImagArena® 6 Week program.  </p>
 		              <br />
 		              <h4 className="text-left"><strong>Duration:</strong> (6) 45 Minute Sessions</h4>
 		              <h4 className="text-left"><strong>Min / Max group size:</strong> 5-20</h4>
@@ -48,7 +47,7 @@ class Programs extends React.Component {
 
 		        <div className="row">
 		          <div className="col-lg-6 col-lg-offset-3">
-		              <img src={'../images/programs_papercraft.png'} className="img-responsive" alt="Responsive image" />
+		              <img src={require('../images/programs_papercraft.png')} className="img-responsive" alt="Responsive image" />
 		          </div>
 		          <div className="col-lg-6 col-lg-offset-3">
 		              <p className="text-left">ImagArena® Papercraft is a standalone imagination recharge.  Rather than using reusable building materials like the 6 Week program, participants create with consumable materials like paper, tape and stickers in an energetic format characteristic of every ImagArena program.  At the end of the workshop they have the option of taking their creations home to share with family and friends. </p>
@@ -69,7 +68,7 @@ class Programs extends React.Component {
 
 		        <div className="row">
 		          <div className="col-lg-6 col-lg-offset-3">
-		              <img src={'../images/programs_custom.png'} className="img-responsive" alt="Responsive image" />
+		              <img src={require('../images/programs_custom.png')} className="img-responsive" alt="Responsive image" />
 		          </div>
 		          <div className="col-lg-6 col-lg-offset-3">
 		              <p className="text-left">Because the ImagArena® framework is so flexible, we can customize a program to your organizations exact needs.  Is there a duration, group size, or weekly format you have in mind that isn’t represented in our other programs?  Contact us today and together we can develop an exciting and inspiring imagination experience for any venue.</p>
