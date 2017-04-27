@@ -258,7 +258,7 @@ h3 {
 }
 
 #homegif {
-  margin-top: 0px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -321,10 +321,11 @@ footer {
   width: 75%;
   margin-left: 12.5%;
   font-size: 20px;
-  margin-top: 0px;
+  font-weight: 400;
+  margin-top: 20px;
 
   @media (min-width: 768px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 

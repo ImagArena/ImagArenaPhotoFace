@@ -17,12 +17,14 @@ class Home extends React.Component {
 						<img src={require('../images/homepage.gif')} className="img-responsive" alt="Responsive image" />
 				</div>
 	      <div >
-					<h2 className="main-header" id="hometext">ImagArena® is a building workshop for ages 6+, designed to awaken the imaginative abilities of every individual.</h2>
+					<h2 className="main-header" id="hometext">ImagArena® is a <strong>building workshop</strong> for <strong>ages 6+</strong>, designed to awaken the imaginative abilities of <strong>every individual</strong>.</h2>
 				</div>
 			</div>
     );
   }
 }
+
+
 
 
 export default Home;
