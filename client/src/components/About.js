@@ -68,11 +68,11 @@ class About extends React.Component {
 					<div className="col-lg-12">
 							<h1 className="text-center" id="bio-header"><strong>Founder Bio</strong></h1>
 					</div>
-					<div className="col-md-4 col-md-offset-2">
+					<div className="col-md-6 col-md-offset-1">
 							<img src={require('../images/biopic.jpg')} className="img-responsive" id="biopic" alt="Responsive image" />
 					</div>
 					<div className="col-md-4">
-							<p className="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br /><br />Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p className="text-left">After graduating Berklee College of Music, founder Tim Merle began to reflect on his own experiences studying the arts and found that traditional arts programs weren’t keeping pace with the 21st century.<br /><br />  He set out to design a program that would engage today’s learners through innovative presentation techniques and a focus on imagining and creating. <br /><br />After years of refining the program in schools across New England, ImagArena® was founded in 2015 with the goal of awakening the imaginative abilities of every individual.<br /><br />When asked how he came up with the idea for ImagArena®, he replies, “It’s simply a product of someone with an art background, a fascination with building toys, and a love for sci-fi movies and video games.  I just put all of those things together and ended up with ImagArena®.”</p>
 					</div>
 				</div>
 
