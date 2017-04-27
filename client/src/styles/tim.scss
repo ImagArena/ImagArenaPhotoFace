@@ -15,15 +15,15 @@ body {
 /* Navbar Styles */
 
 .index {
-	margin-top: 80px;
+	margin-top: 60px;
 }
 
 
-body > .container-fluid {
+.index > .container-fluid {
 	margin-top: 80px;
 }
 
-body > .container-fluid-materials {
+.index > .container-fluid-materials {
 	margin-top: 0px;
 }
 
@@ -77,10 +77,6 @@ body > .container-fluid-materials {
   padding: 5px 10px;
 }
 
-#creations {
-	margin-left: 12px;
-}
-
 #creations, #creations-text {
 	background: #00aeef;
 }
@@ -104,9 +100,25 @@ body > .container-fluid-materials {
 	text-decoration: none;
 }
 
-ul.nav.navbar-right {
-	display: flex;
-	align-items: center;
+@media (min-width: 768px) {
+	ul.nav.navbar-right {
+		display: flex;
+		align-items: center;
+	}
+
+	#imagarena-nav .pill-boy {
+		margin-right: 10px;
+	}
+
+	#creations {
+		margin-left: 10px;
+	}
+
+	#imagarena-nav .pill-boy a, #materials-text, #creations-text {
+		border-radius: 50px;
+	  padding: 5px 10px;
+	}
+
 }
 
 .banner-title {
@@ -116,10 +128,14 @@ ul.nav.navbar-right {
 	background: #00a651;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin-top: 60px;
-  margin-bottom: 0px;
 	text-transform: uppercase;
 	font-size: 40px;
+	float: left;
+	margin-top: 0;
+}
+
+.banner-title.creations {
+	background: #00aeef;
 }
 
 .banner-subtitle-material {
