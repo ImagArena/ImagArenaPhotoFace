@@ -49,6 +49,7 @@ body {
 	background-color: black;
 	color: white;
 	border: none;
+	z-index: 3;
 }
 
 #imagarena-nav a {
@@ -135,6 +136,8 @@ body {
 
 .banner-title.creations {
 	background-color: #00aeef;
+	z-index: 3;
+	position: absolute;
 }
 
 .banner-title.materials {
