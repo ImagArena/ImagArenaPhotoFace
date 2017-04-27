@@ -89,7 +89,9 @@ body {
 		font-size: 40px;
 	}
 
-	img {
+}
+
+.mosaic img {
 		width: 20%;
 		cursor: pointer;
 		opacity: 1;
@@ -97,8 +99,6 @@ body {
 		&:hover {
 			opacity: 0.8;
 		}
-	}
-
 }
 
 .modal-backdrop.in {
