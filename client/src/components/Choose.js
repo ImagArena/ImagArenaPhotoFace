@@ -11,10 +11,12 @@ class Choose extends React.Component {
   render = () => {
     return (
       <div className="index">
-				<h1 className="banner-title creations"><strong>Creations</strong></h1>
-        <p className="banner-subtitle-material">ImagArena® activities feature open-ended building systems that encourage exploration and imaginative play. </p>
-            <ClassSelector />
-        
+				<div className="creations-banner">
+					<h1 className="banner-title"><strong>Creations</strong></h1>
+					<p className="banner-subtitle-material">ImagArena® activities feature open-ended building systems that encourage exploration and imaginative play. </p>
+				</div>
+        <ClassSelector />
+
 
 			</div>
     );
