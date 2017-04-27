@@ -12,8 +12,13 @@ class Home extends React.Component {
 
   render = () => {
     return (
-      <div className="index">
-				<h1 id="group-name" className="main-header">Home</h1>
+			<div className="index">
+				<div id="homegif" className="col-md-8 col-md-offset-2">
+						<img src={require('../images/homepage.gif')} className="img-responsive" alt="Responsive image" />
+				</div>
+	      <div >
+					<h2 className="main-header" id="hometext">ImagArena® is a building workshop for ages 6+, designed to awaken the imaginative abilities of every individual.</h2>
+				</div>
 			</div>
     );
   }

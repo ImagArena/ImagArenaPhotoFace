@@ -47,7 +47,7 @@ class ClassSelector extends Component {
     render = () => {
 			return (
 				<div className='Dropdown-container'>
-					<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={this.props.default} placeholder="Choose Group" />
+					<Dropdown options={this.state.groups} onChange={this.chooseGroupName} value={this.props.default} placeholder="Select Group" />
 				</div>
 
 			)

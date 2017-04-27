@@ -13,7 +13,7 @@ class Choose extends React.Component {
       <div className="index">
 				<div className="creations-banner">
 					<h1 className="banner-title"><strong>Creations</strong></h1>
-					<p className="banner-subtitle-material">ImagArena® activities feature open-ended building systems that encourage exploration and imaginative play. </p>
+					<p className="banner-subtitle-material">Select a group name to explore what's being made inside the ImagArena®.</p>
 				</div>
         <ClassSelector />
 
