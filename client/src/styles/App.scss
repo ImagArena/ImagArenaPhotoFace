@@ -3,6 +3,11 @@ body {
 	background: white;
 }
 
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .link-button {
 	padding: 10px 50px;
 	background: #333333;
@@ -84,21 +89,22 @@ body {
 		width: 100%;
 	}
 
+}
+
+.mosaic {
 	h2 {
 		float: left;
 		font-size: 40px;
 	}
-
-}
-
-.mosaic img {
-		width: 20%;
-		cursor: pointer;
-		opacity: 1;
-		transition: 200ms;
-		&:hover {
-			opacity: 0.8;
-		}
+	img {
+			width: 20%;
+			cursor: pointer;
+			opacity: 1;
+			transition: 200ms;
+			&:hover {
+				opacity: 0.8;
+			}
+	}
 }
 
 .modal-backdrop.in {
