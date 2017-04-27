@@ -120,6 +120,7 @@ class Photos extends React.Component {
 					<span role="button" className="glyphicon glyphicon-chevron-left" onClick={this.prev}></span>
 			    <img src={this.state.levels[this.state.currentLevel][this.state.currentPhoto]} />
 					<span role="button" className="glyphicon glyphicon-chevron-right" onClick={this.next}></span>
+					<a href={this.state.levels[this.state.currentLevel][this.state.currentPhoto]} role="button" className="glyphicon glyphicon-floppy-save" onClick={this.download} download></a>
 				</Modal>
 		  </div>
 		);
@@ -132,18 +133,25 @@ class Photos extends React.Component {
     return (
 
       <div className="index mosaic">
-				<h1 className="banner-title creations"><strong>Creations</strong></h1>
-				<p className="banner-subtitle-material">ImagArena® activities feature open-ended building systems that encourage exploration and imaginative play. </p>
-				<div id="loading-indicator" className={loading()}>
-					<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
+				<div className="creations-banner">
+					<h1 className="banner-title"><strong>Creations</strong></h1>
+					<p className="banner-subtitle-material">ImagArena® activities feature open-ended building systems that encourage exploration and imaginative play. </p>
 				</div>
 
-				<ClassSelector default={defaultOption} reload={true} />
+				<div className="mosaic-container">
+					<div id="loading-indicator" className={loading()}>
+						<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
+					</div>
 
-				<h3 id="group-name" className="main-header">{title(this.props.params.groupName)}</h3>
+					<ClassSelector default={defaultOption} reload={true} />
 
-				{modalInstance}
-				{levels}
+					<h3 id="group-name" className="main-header">{title(this.props.params.groupName)}</h3>
+
+					{modalInstance}
+					{levels}
+				</div>
+
+
       </div>
     );
   }

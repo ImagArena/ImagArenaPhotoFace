@@ -69,7 +69,7 @@
 	background-color: black;
 	color: white;
 	border: none;
-	z-index: 3;
+	z-index: 4;
 }
 
 #imagarena-nav a {
@@ -149,13 +149,18 @@
 	margin-top: 0;
 }
 
-.banner-title.creations {
-	background-color: #00aeef;
-  z-index: 3;
-	position: absolute;
+.creations-banner {
+	width: 100%;
+	z-index: 3;
+	float: left;
 	top: 60px;
 
+	.banner-title {
+		background-color: #00aeef;
+		margin-bottom: 0;
+	}
 }
+
 
 .banner-title.materials {
 	background-color: #00a651;
@@ -172,7 +177,7 @@
 	font-size: 16px;
   font-weight: 400;
 	float: left;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .banner-footer {
@@ -186,8 +191,6 @@
 	font-size: 12px;
 
 }
-
-
 
 
 /* End Navbar */
