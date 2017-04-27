@@ -1,4 +1,4 @@
-body {
+ body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
 }
@@ -49,6 +49,7 @@ body {
 	background-color: black;
 	color: white;
 	border: none;
+	z-index: 3;
 }
 
 #imagarena-nav a {
@@ -135,7 +136,9 @@ body {
 
 .banner-title.creations {
 	background-color: #00aeef;
-  margin-bottom: 0px;
+  z-index: 3;
+	position: absolute;
+
 }
 
 .banner-title.materials {
