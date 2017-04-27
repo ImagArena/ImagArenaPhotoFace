@@ -27,6 +27,7 @@
 	margin-top: 0px;
 
 	.row:first-of-type {
+		margin: 0 auto;
 
 		&:before {
 			content: none;
@@ -37,6 +38,7 @@
 		flex-direction: row;
 		width: 100%;
 		flex-wrap: wrap;
+		float: left;
 	}
 }
 
@@ -211,7 +213,7 @@
 	padding-bottom: 20px;
   margin-top: 20px;
 	font-size: 12px;
-
+	float: left;
 }
 
 

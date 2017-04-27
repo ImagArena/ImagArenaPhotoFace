@@ -1,4 +1,4 @@
-#!/bin/bash -f
+#!/bin/bash
 echo "Type Commit Message:"
 read commit_message
 
@@ -6,12 +6,9 @@ git add .
 git commit -m $commit_message
 git push
 
-echo "Type AWS SSH Password"
+echo "Type AWS SSH Password:"
 read password
-spawn ssh bleachercreature@34.223.254.57
-expect "assword:"
-send $password
-interact
+ssh -p $password bleachercreature@34.223.254.57
 cd ImagArenaPhotoFace
 git pull
 cd client
