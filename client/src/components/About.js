@@ -22,9 +22,9 @@ class About extends React.Component {
 						</div>
 					</div>
 
-				<hr />
 
-					<div className="row">
+
+					<div className="row" id="graydivabout">
 						<div className="col-md-4 col-md-offset-2">
 								<h3><strong>Innovative Presentation Method</strong></h3>
 								<p className="text-left">Much more than just an instructor and a curriculum, ImagArena® is a <strong>total audiovisual experience</strong> designed to engage 21st century learners.  <br /><br />Each session is guided by an <strong>automated projection system</strong> that sets the pace and introduces new activities.  The result is an environment that feels less like a ‘class’ and more like a <strong>‘futuristic imagination training session’</strong>.</p>
@@ -49,7 +49,7 @@ class About extends React.Component {
 
 			<br />
 
-				<div className="row">
+				<div className="row" id="graydivabout" >
 					<div className="col-md-4 col-md-offset-2">
 							<h3><strong>Energetic Framework</strong></h3>
 							<p className="text-left">A robust and <strong>flexible game framework</strong> supports the fast pace of each ImagArena® session.<br /><br />The sessions are divided into rounds and each round has different <strong>materials, time limits, and special rules</strong>.  It is a framework that makes sense for participants of all ages, and one that allows the <strong>excitement of imaginative expression</strong> to reach a height that is characteristic of the ImagArena® experience.
@@ -60,7 +60,7 @@ class About extends React.Component {
 					</div>
 				</div>
 
-				<br />
+				
 
 
 
