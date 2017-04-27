@@ -69,13 +69,11 @@ body {
 		color: #e0e0e0;
 		top: 0;
 		margin: 0 auto;
-		font-size: 140px;
-		letter-spacing: -5px;
 		pointer-events: none;
 		z-index: 2;
 
 		img {
-			position: absolute;
+			position: relative;
 			margin-top: 80px;
 			width: 50%;
 		}
