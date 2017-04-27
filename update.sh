@@ -7,7 +7,7 @@ git commit -m $commit_message
 git push
 
 echo "Type AWS SSH Password:"
-read $password
+read password
 ssh -p $password bleachercreature@34.223.254.57
 cd ImagArenaPhotoFace
 git pull
