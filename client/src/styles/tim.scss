@@ -329,15 +329,16 @@ footer {
 }
 
 #bio {
-  color: #ffffff;
-  background-color: #c0c0c0;
+
+  background-color: #ffffff;
   padding-bottom: 20px;
 }
 
 #bio-header {
+  color: #ffffff;
   margin-bottom: 40px;
-	padding-top: 15px;
-  padding-bottom: 15px;
+	padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #979797;
 	margin-top: 0;
 }
@@ -350,8 +351,13 @@ footer {
 #graydivabout {
   background-color: #efefef;
   margin-top: 10px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 #hometext {
@@ -367,6 +373,6 @@ footer {
 }
 
 #biopic {
-  border-radius: 5px;
+  border-radius: 20px;
   margin-bottom: 20px;
 }

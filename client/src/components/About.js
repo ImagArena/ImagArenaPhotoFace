@@ -60,12 +60,12 @@ class About extends React.Component {
 					</div>
 				</div>
 
-				
+
 
 
 
 				<div className="row" id="bio">
-						<h1 className="text-center" id="bio-header"><strong>Founder Bio</strong></h1>
+						<h1 className="text-center" id="bio-header">Founder <strong>Bio</strong></h1>
 					<div className="col-md-6 col-md-offset-1">
 							<img src={require('../images/biopic.jpg')} className="img-responsive" id="biopic" alt="Responsive image" />
 					</div>
