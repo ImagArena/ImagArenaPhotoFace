@@ -22,9 +22,9 @@ class Programs extends React.Component {
 		          </div>
 		        </div>
 
-		        <hr />
 
-		        <div className="row">
+
+		        <div className="row" id="graydiv">
 		          <div className="col-lg-6 col-lg-offset-3">
 		              <img src={require('../images/programs_6week.png')} className="img-responsive" alt="Responsive image" />
 		          </div>
@@ -43,7 +43,7 @@ class Programs extends React.Component {
 		          </div>
 		        </div>
 
-		      <hr />
+
 
 		        <div className="row">
 		          <div className="col-lg-6 col-lg-offset-3">
@@ -64,9 +64,9 @@ class Programs extends React.Component {
 		          </div>
 		        </div>
 
-		      <hr />
 
-		        <div className="row">
+
+		        <div className="row" id="graydiv">
 		          <div className="col-lg-6 col-lg-offset-3">
 		              <img src={require('../images/programs_custom.png')} className="img-responsive" alt="Responsive image" />
 		          </div>
