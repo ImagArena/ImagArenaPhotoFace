@@ -20,7 +20,7 @@ class Materials extends React.Component {
 		        <div className="col-sm-3 col-md-2 productcell">
 		          <img src={require('../images/store/brainflake.gif')} className="img-responsive product" alt="Responsive image" />
 		          <h2 className="text-center">Brainflake</h2>
-		          <a href="https://www.amazon.com/VIAHART-Interlocking-Educational-Alternative-Childrens/dp/B00N7CD4BK/ref=sr_1_1?ie=UTF8&qid=1492110110&sr=8-1&keywords=brainflake" target="_blank">
+		          <a href="https://www.amazon.com/gp/product/B00N7CD4BK/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=imag0b-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00N7CD4BK&linkId=7cfc0eaa799afb90e61a62854846439b" target="_blank">
 		            <img src={require('../images/amazon.png')} className="img-responsive amazonbutton" alt="Responsive image" />
 		          </a>
 		        </div>
