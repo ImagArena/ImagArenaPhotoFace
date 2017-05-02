@@ -19,7 +19,7 @@ class Materials extends React.Component {
 		      <div className="row">
 		        <div className="col-sm-3 col-md-2 productcell">
 		          <img src={require('../images/store/brainflake.gif')} className="img-responsive product" alt="Responsive image" />
-		          <h2 className="text-center">Brainflake</h2>
+		          <h2 className="text-center">Brainflake test</h2>
 		          <a href="https://www.amazon.com/gp/product/B00N7CD4BK/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=imag0b-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00N7CD4BK&linkId=7cfc0eaa799afb90e61a62854846439b" target="_blank">
 		            <img src={require('../images/amazon.png')} className="img-responsive amazonbutton" alt="Responsive image" />
 		          </a>
