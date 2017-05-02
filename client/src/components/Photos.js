@@ -24,7 +24,7 @@ class Photos extends React.Component {
 	}
 
 	componentDidMount = () => {
-		Axios.post('http://ec2-34-223-254-57.us-west-2.compute.amazonaws.com:3001/get_class_photos/', {groupName: this.props.params.groupName}).then(
+		Axios.post('http://ec2-54-202-229-195.us-west-2.compute.amazonaws.com/get_class_photos/', {groupName: this.props.params.groupName}).then(
 			function success(response) {
 				let levels = response.data;
 				for (var i = 0; i < levels.length; i++) {
