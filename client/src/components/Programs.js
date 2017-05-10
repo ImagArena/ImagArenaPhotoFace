@@ -16,20 +16,39 @@ class Programs extends React.Component {
       <div className="index">
 				<div className="container-fluid">
 
-		        <div className="row">
-		          <div className="col-lg-8 col-lg-offset-2">
-		              <p><strong>ImagArena®</strong> is an exciting and hands-on program where <strong>participants ages 6+</strong> explore the power of imagination through <strong>open-ended building exercises</strong>.  Much more than a typical building workshop, ImagArena® combines innovative presentation techniques with game design elements to provide an experience that <strong>engages all types of learners</strong>.  Whether you’re looking for an after-school workshop, a summer camp, a school assembly or a special event, we have programs that <strong>everyone can enjoy</strong>.</p>
-		          </div>
-		        </div>
+				<div className="row programselect">
+					<div className="col-lg-4">
+							<a href="#6week"><img src={require('../images/programs_6week.png')} className="img-responsive" alt="Responsive image" /></a>
+					</div>
+					<div className="col-lg-4">
+							<a href="#papercraft"><img src={require('../images/programs_papercraft.png')} className="img-responsive" alt="Responsive image" /></a>
+					</div>
+					<div className="col-lg-4">
+							<a href="#custom"><img src={require('../images/programs_custom.png')} className="img-responsive" alt="Responsive image" /></a>
+					</div>
+				</div>
+
+				<div className="row programheader">
+					<div className="col-lg-8 col-lg-offset-2">
+							<p><strong>ImagArena®</strong> is an exciting and hands-on program where <strong>participants ages 6+</strong> explore the power of imagination through <strong>open-ended building exercises</strong>.  More than a typical building workshop, ImagArena® combines innovative presentation techniques with game design elements to provide an experience that <strong>engages all types of learners</strong>.  Whether you’re looking for an after-school workshop, a summer camp, a school assembly or a special event, we have programs that <strong>everyone can enjoy</strong>.</p>
+					</div>
+				</div>
 
 
 
-		        <div className="row" id="graydiv">
+
+
+
+
+
+
+
+		        <div className="row graydiv" id="6week">
 		          <div className="col-lg-6 col-lg-offset-3">
 		              <img src={require('../images/programs_6week.png')} className="img-responsive" alt="Responsive image" />
 		          </div>
 		          <div className="col-lg-6 col-lg-offset-3">
-		              <p className="text-left">ImagArena® 6 Week is a total imagination experience.  Participants create with over 30 different building <Link id="materials-text" to="/materials">MATERIALS</Link>, and over the course of 6 sessions they discover the power of their imagination while learning strategies for overcoming creative blocks and working in teams.  After each session photos of participants work are posted online for family and friends to view, and by checking out the <Link id="creations-text" to="/creations">CREATIONS</Link> page you can get an inside glimpse of what it’s like inside an ImagArena® 6 Week program.  </p>
+		              <p className="text-left">ImagArena® 6 Week is a total imagination experience.  Participants imagine and create with over 30 different building <Link id="materials-text" to="/materials">MATERIALS</Link>, and over the course of 6 sessions they discover the power of their imagination while learning strategies for overcoming creative blocks and engaging in teams.  After every session, photos are posted online displaying the work of each participant on the <Link id="creations-text" to="/creations">CREATIONS</Link> page. This allows family and friends to get an inside look of what it’s like inside the ImagArena® 6 Week program.  </p>
 		              <br />
 		              <h4 className="text-left"><strong>Duration:</strong> (6) 45 Minute Sessions</h4>
 		              <h4 className="text-left"><strong>Min / Max group size:</strong> 5-20</h4>
@@ -45,7 +64,7 @@ class Programs extends React.Component {
 
 
 
-		        <div className="row">
+		        <div className="row" id="papercraft">
 		          <div className="col-lg-6 col-lg-offset-3">
 		              <img src={require('../images/programs_papercraft.png')} className="img-responsive" alt="Responsive image" />
 		          </div>
@@ -66,7 +85,7 @@ class Programs extends React.Component {
 
 
 
-		        <div className="row" id="graydiv">
+		        <div className="row graydiv" id="custom">
 		          <div className="col-lg-6 col-lg-offset-3">
 		              <img src={require('../images/programs_custom.png')} className="img-responsive" alt="Responsive image" />
 		          </div>

@@ -343,7 +343,7 @@ footer {
 	margin-top: 0;
 }
 
-#graydiv {
+.graydiv {
   background-color: #efefef;
   margin-top: 10px;
 }
@@ -374,5 +374,13 @@ footer {
 
 #biopic {
   border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.programselect {
+  margin-bottom: 20px;
+}
+
+.programheader{
   margin-bottom: 20px;
 }
