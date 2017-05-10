@@ -384,3 +384,14 @@ footer {
 .programheader{
   margin-bottom: 20px;
 }
+
+.program-link {
+	img {
+		transition: 150ms;
+	}
+	&:hover {
+		img {
+			opacity: 0.7;
+		}
+	}
+}

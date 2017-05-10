@@ -18,13 +18,13 @@ class Programs extends React.Component {
 
 				<div className="row programselect">
 					<div className="col-lg-4">
-							<a href="#6week"><img src={require('../images/programs_6week.png')} className="img-responsive" alt="Responsive image" /></a>
+							<a className="program-link" href="#6week"><img src={require('../images/programs_6week.png')} className="img-responsive" alt="Responsive image" /></a>
 					</div>
 					<div className="col-lg-4">
-							<a href="#papercraft"><img src={require('../images/programs_papercraft.png')} className="img-responsive" alt="Responsive image" /></a>
+							<a className="program-link" href="#papercraft"><img src={require('../images/programs_papercraft.png')} className="img-responsive" alt="Responsive image" /></a>
 					</div>
 					<div className="col-lg-4">
-							<a href="#custom"><img src={require('../images/programs_custom.png')} className="img-responsive" alt="Responsive image" /></a>
+							<a className="program-link" href="#custom"><img src={require('../images/programs_custom.png')} className="img-responsive" alt="Responsive image" /></a>
 					</div>
 				</div>
 
