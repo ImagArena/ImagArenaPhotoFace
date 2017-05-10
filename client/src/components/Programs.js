@@ -54,10 +54,7 @@ class Programs extends React.Component {
 		              <h4 className="text-left"><strong>Min / Max group size:</strong> 5-20</h4>
 		              <h4 className="text-left"><strong>Great for:</strong> After School Programs, Summer Camps</h4>
 		              <a href="mailto:contact@imagarena.org"><input className="btn btn-custom btn-lg" type="button" value="Request Booking Info" /></a>
-		              <blockquote>
-		                  <p className="quote"><em>"ImagArena® is a flavor-burst of education, and its impact is far-reaching, going well beyond art instruction. It energizes students and inspires teachers, each of which has immense value in itself."</em></p>
-		                  <footer>Justin Hajj / Head 6th Grade Teacher / The Learning Project Elementary School / Boston, MA</footer>
-		              </blockquote>
+		              
 
 		          </div>
 		        </div>
@@ -75,10 +72,7 @@ class Programs extends React.Component {
 		              <h4 className="text-left"><strong>Min / Max group size:</strong> 5-20+</h4>
 		              <h4 className="text-left"><strong>Great for:</strong> Summer Camps, School Assemblies, Libraries, After School Programs</h4>
 		              <a href="mailto:contact@imagarena.org"><input className="btn btn-custom btn-lg" type="button" value="Request Booking Info" /></a>
-		              <blockquote>
-		                  <p className="quote"><em>"ImagArena® interactive program prompted the participants to develop critical thinking and problem solving skills while having a rousing good time learning!  The MGH Youth Zone staff wholeheartedly recommends ImagArena® to any school or organization that is looking for a professional, lively presentation."</em></p>
-		                  <footer>Leslie Heffron, RN, BSN, Med. / Program Director / Massachusetts General Hospital Youth Zone / Boston, MA</footer>
-		              </blockquote>
+
 
 		          </div>
 		        </div>
@@ -96,10 +90,7 @@ class Programs extends React.Component {
 		              <h4 className="text-left"><strong>Min / Max group size:</strong> ? ? ?</h4>
 		              <h4 className="text-left"><strong>Great for:</strong> Any place where people gather</h4>
 		              <a href="mailto:contact@imagarena.org"><input className="btn btn-custom btn-lg" type="button" value="Request Booking Info" /></a>
-		              <blockquote>
-		                  <p className="quote"><em>"The materials were attractive, appealing and designed to give the participants a full sensory experience. We highly recommend the ImagArena® program for organizations looking for an alternative way to incorporate a fun and challenging component to their curriculum."</em></p>
-		                  <footer>Paula Cuneo / Lead Teacher / Christian Family Montesorri School / Holliston, MA</footer>
-		              </blockquote>
+
 
 		          </div>
 		        </div>
