@@ -18,6 +18,23 @@
 			if (screen.width < 768)
 	    	$('.navbar-toggle').click() //bootstrap 3.x by Richard
 		});
+
+		$('a[href^="#"]').on('click', function (e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+
+				'scrollTop': $target.offset().top - 60
+
+		}, 700, 'swing', function () {
+
+				window.location.hash = target;
+
+		});
+});
 	})
 	</script>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,700" rel="stylesheet">
