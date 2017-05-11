@@ -74,6 +74,7 @@
     "react-bootstrap": "^0.30.6",
     "react-dom": "^0.14.0",
     "react-dropdown": "1.1.0",
+    "react-ga": "^2.2.0",
     "react-router": "^2.6.0",
     "titlecase": "^1.1.2"
   }
