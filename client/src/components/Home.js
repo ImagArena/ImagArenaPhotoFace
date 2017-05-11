@@ -21,19 +21,19 @@ class Home extends React.Component {
 				</div>
 
 				<div className="row programselect">
-					<div className="col-lg-2 col-lg-offset-3">
+					<div className="col-lg-2 col-sm-4 col-lg-offset-3">
 
 								<p className="quote"><em>"ImagArena® is a flavor-burst of education, and its impact is far-reaching, going well beyond art instruction. It energizes students and inspires teachers, each of which has immense value in itself."</em>
 								<br /><br /><small>Justin Hajj / Head 6th Grade Teacher / The Learning Project Elementary School / Boston, MA</small></p>
 
 					</div>
-					<div className="col-lg-2">
+					<div className="col-lg-2 col-sm-4">
 
 								<p className="quote"><em>"ImagArena® interactive program prompted the participants to develop critical thinking and problem solving skills while having a rousing good time learning!  The MGH Youth Zone staff wholeheartedly recommends ImagArena® to any school or organization that is looking for a professional, lively presentation."</em>
 								<br /><br /><small>Leslie Heffron, RN, BSN, Med. / Program Director / Massachusetts General Hospital Youth Zone / Boston, MA</small></p>
 
 					</div>
-					<div className="col-lg-2">
+					<div className="col-lg-2 col-sm-4">
 
 								<p className="quote"><em>"The materials were attractive, appealing and designed to give the participants a full sensory experience. We highly recommend the ImagArena® program for organizations looking for an alternative way to incorporate a fun and challenging component to their curriculum."</em>
 								<br /><br /><small>Paula Cuneo / Lead Teacher / Christian Family Montesorri School / Holliston, MA</small></p>
