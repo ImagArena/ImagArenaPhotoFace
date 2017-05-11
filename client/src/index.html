@@ -17,6 +17,11 @@
 			$('.nav a').on('click', function(){
 			if (screen.width < 768)
 	    	$('.navbar-toggle').click() //bootstrap 3.x by Richard
+				$('html, body').stop().animate({
+						'scrollTop': 0
+				}, 0, 'swing', function() {
+					console.log('fuck');
+				});
 		});
 
 	})
