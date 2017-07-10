@@ -65,7 +65,7 @@ class Programs extends React.Component {
 
 				<div className="row programheader">
 					<div className="col-lg-8 col-lg-offset-2">
-							<p><strong>ImagArena®</strong> is an exciting and hands-on program where <strong>participants ages 6+</strong> explore the power of imagination through <strong>open-ended building exercises</strong>.  More than a typical building workshop, ImagArena® combines innovative presentation techniques with game design elements to provide an experience that <strong>engages all types of learners</strong>.  Whether you’re looking for an after-school workshop, a summer camp, a school assembly or a special event, we have programs that <strong>everyone can enjoy</strong>.</p>
+							<p><strong>ImagArena®</strong> is an exciting and hands-on program where <strong>participants ages 6+</strong> explore the power of imagination through <strong>open-ended building exercises</strong>.  More than a typical building workshop, ImagArena® combines the <strong>spirit of an art program</strong>, the <strong>materials of a building workshop</strong>, and the <strong>framework of a video game</strong> to provide an experience that <strong>engages all types of learners</strong>.  Whether you’re looking for an after-school workshop, a summer camp, a school assembly or a special event, we have programs that <strong>everyone can enjoy</strong>.</p>
 					</div>
 				</div>
 

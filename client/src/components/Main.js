@@ -30,7 +30,7 @@ class Main extends React.Component {
 						<span className="icon-bar"></span>
 					</button>
 					<Link to="/" className="navbar-brand">
-						<img src='http://imagarenastatic.s3.amazonaws.com/logo.svg' />
+						<img src='../images/logo_lockup.svg' />
 					</Link>
 				</div>
 				<div id="collapse" className="collapse navbar-collapse">
