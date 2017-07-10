@@ -18,6 +18,10 @@ class About extends React.Component {
 
 					<div className="row">
 						<div className="col-lg-8 col-lg-offset-2">
+								<div id="about-video" className="videoWrapper">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/lZjBRU31-90" frameborder="0" allowfullscreen></iframe>
+								</div>
+
 								<p>By combining the <strong>spirit of an art program</strong>, the <strong>materials of a building workshop</strong>, and the <strong>framework of a video game</strong>, ImagArena® provides people of all ages the chance to freely explore their imaginative abilities.  The atmosphere created is inviting and fresh, where the <strong>imaginative process</strong> is emphasized over the judgment of product, and where ideas like “I am not creative”, “I am not artistic”, and “I am not imaginative” are left at the door.  It is a program unlike any other, designed to <strong>isolate the beauty and wonder of imagination</strong>, and to celebrate it.</p>
 						</div>
 					</div>

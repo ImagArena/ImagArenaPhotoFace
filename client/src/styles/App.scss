@@ -140,6 +140,33 @@ body {
 	margin-bottom: 20px;
 }
 
+// Responsive Video Container
+
+#home-video {
+	margin-top: 20px;
+}
+
+#about-video {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper object,
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
 .mosaic-container {
 	float: left;
 	width: 100%;

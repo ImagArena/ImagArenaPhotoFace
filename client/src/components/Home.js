@@ -14,7 +14,10 @@ class Home extends React.Component {
     return (
 			<div className="index">
 				<div id="homegif" className="col-md-8 col-md-offset-2">
-						<img src={require('../images/homepage.gif')} className="img-responsive" alt="Responsive image" />
+					<div id="home-video" className="videoWrapper">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/9yvGqvQjs7s" frameborder="0" allowfullscreen></iframe>
+					</div>
+
 				</div>
 	      <div >
 					<h2 className="main-header" id="hometext">ImagArena® is a <strong>building workshop</strong> for <strong>ages 6+</strong>, designed to awaken the imaginative abilities of <strong>every individual</strong>.</h2>
