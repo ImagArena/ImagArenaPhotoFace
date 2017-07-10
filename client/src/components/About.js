@@ -19,7 +19,7 @@ class About extends React.Component {
 					<div className="row">
 						<div className="col-lg-8 col-lg-offset-2">
 								<div id="about-video" className="videoWrapper">
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/loxVb4ki9Fs" frameborder="0" allowfullscreen></iframe>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/-mhQzPnsTr4" frameborder="0" allowfullscreen></iframe>
 								</div>
 						</div>
 					</div>
