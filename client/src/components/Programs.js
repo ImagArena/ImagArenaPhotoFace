@@ -51,7 +51,7 @@ class Programs extends React.Component {
       <div className="index">
 				<div className="container-fluid">
 
-				<div className="row programselect">
+				{/* }<div className="row programselect">
 					<div className="col-lg-4 col-sm-4">
 							<a className="program-link" href="#6week"><img src={require('../images/programs_6week.png')} className="img-responsive" alt="Responsive image" /></a>
 					</div>
@@ -61,7 +61,7 @@ class Programs extends React.Component {
 					<div className="col-lg-4 col-sm-4">
 							<a className="program-link" href="#custom"><img src={require('../images/programs_custom.png')} className="img-responsive" alt="Responsive image" /></a>
 					</div>
-				</div>
+				</div> */}
 
 				<div className="row programheader">
 					<div className="col-lg-8 col-lg-offset-2">
