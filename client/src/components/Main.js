@@ -5,6 +5,7 @@ require('styles/tim.scss');
 import React from 'react';
 import { Link } from 'react-router';
 import NavLink from './NavLink';
+import Logo from '../images/logo_lockup.svg';
 
 
 class Main extends React.Component {
@@ -30,7 +31,7 @@ class Main extends React.Component {
 						<span className="icon-bar"></span>
 					</button>
 					<Link to="/" className="navbar-brand">
-						<img src='../images/logo_lockup.svg' />
+						<img src={Logo} />
 					</Link>
 				</div>
 				<div id="collapse" className="collapse navbar-collapse">
