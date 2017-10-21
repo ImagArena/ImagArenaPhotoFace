@@ -152,6 +152,7 @@ h3 {
   cursor: pointer;
   font-size: 60px;
   z-index: 3;
+  width: 100%;
 }
 
 #down-arrow:hover {
