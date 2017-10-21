@@ -70,7 +70,7 @@ class Home extends React.Component {
         {/* banners */}
         <div className="">
           <div className="videoholder">
-            <h1>Expand Your Imagination</h1>
+            <h1>Expand your imagination</h1>
             <a id="video-play" data-toggle="modal" data-target="#video-modal">
               <img src={require("../images/play-button.svg")} />
             </a>
