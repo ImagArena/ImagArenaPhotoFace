@@ -1,11 +1,11 @@
 require('normalize.css/normalize.css');
-require('styles/App.scss');
-require('styles/tim.scss');
+
+require('styles/bootstrap.css');
+require('styles/custom.css');
 
 import React from 'react';
 import { Link } from 'react-router';
-import NavLink from './NavLink';
-import Logo from '../images/logo_lockup.svg';
+import Logo from '../images/logo.png';
 
 
 class Main extends React.Component {
@@ -20,34 +20,36 @@ class Main extends React.Component {
 
   render = () => {
     return (
-      <div className="main">
-			<nav id="imagarena-nav" className="navbar navbar-default navbar-fixed-top">
-			<div className="container-fluid">
-				<div className="navbar-header">
-					<button type="button" className="collapsed navbar-toggle" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
-						<span className="sr-only">Toggle navigation</span>
-						<span className="icon-bar"></span>
-						<span className="icon-bar"></span>
-						<span className="icon-bar"></span>
-					</button>
-					<Link to="/" className="navbar-brand">
-						<img src={Logo} />
-					</Link>
-				</div>
-				<div id="collapse" className="collapse navbar-collapse">
-					<ul className="nav navbar-nav navbar-right">
-						<NavLink to="/programs">Programs</NavLink>
-						<NavLink to="/about">About</NavLink>
-						<NavLink to="/contact">Contact</NavLink>
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-faded fixed-top">
+          <div className="container">
 
-						<li className="pill-boy"><Link to="/creations" id="creations">Creations</Link></li>
-						<li className="pill-boy"><Link to="/materials" id="materials">Materials</Link></li>
-					</ul>
-				</div>
-			</div>
-			</nav>
-				{this.props.children}
-			</div>
+            <Link className="navbar-brand" to="/">
+              <img src={Logo} />
+            </Link>
+
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <a className="nav-link" href="#programs">Programs</a>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/faq">FAQ</Link>
+                </li>
+                <li className="nav-item">
+                  <Link id="creations-link" to="/creations">Creations</Link>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+        {this.props.children}
+      </div>
     );
   }
 }

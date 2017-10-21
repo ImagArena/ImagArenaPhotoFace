@@ -8,10 +8,7 @@ ReactGA.initialize('UA-74261860-1');
 
 import Main from './components/Main';
 import Home from './components/Home';
-import Programs from './components/Programs';
-import About from './components/About';
-import Contact from './components/Contact';
-import Materials from './components/Materials';
+import FAQ from './components/FAQ';
 
 
 import Choose from './components/Choose';
@@ -28,11 +25,8 @@ ReactDOM.render((
 
 	<Route path='/' component={Main}>
 		<IndexRoute component={Home} />
-		<Route path='programs' component={Programs}></Route>
-		<Route path='about' component={About}></Route>
-		<Route path='contact' component={Contact}></Route>
-		<Route path='materials' component={Materials}></Route>
 
+    <Route path='faq' component={FAQ} />
 		<Route path='creations' component={Choose} />
 		<Route path='creations/:groupName' component={Photos}/>
 	</Route>
