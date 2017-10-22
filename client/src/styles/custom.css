@@ -23,7 +23,7 @@ button {
 #creations-link {
   border-radius: 40px;
   color: white;
-  background: #f1774f;
+  background: #63b363;
   padding: 10px 14px;
   transition: 250ms;
   float: left;
@@ -271,12 +271,12 @@ h3 {
 
 .smallstripe2 {
   color: #fff;
-  background-image: radial-gradient(circle,#f38c6b,#f1774f);
+  background-image: radial-gradient(circle, #88d288, #63b363);
   padding: 20px 0;
 }
 
 .smallstripe2 .btn:hover {
-  color: #f38c6b;
+  color: #88d288;
 }
 
 .smallstripe2 h3 {
@@ -338,11 +338,11 @@ h3 {
 }
 
 .faq-banner {
-  background-image: radial-gradient(circle, #88d288, #63b363);
+  background-image: radial-gradient(circle,#f38c6b,#f1774f);
 }
 
 .creations-banner {
-  background-image: radial-gradient(circle,#f38c6b,#f1774f);
+  background-image: radial-gradient(circle, #88d288, #63b363);
 }
 
 .top-banner {
