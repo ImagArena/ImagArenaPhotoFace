@@ -1,4 +1,6 @@
 require('normalize.css/normalize.css');
+require('styles/bootstrap.css');
+require('styles/custom.css');
 require('styles/App.scss');
 
 import path from 'path';
@@ -132,29 +134,31 @@ class Photos extends React.Component {
 
     return (
 
-      <div className="index mosaic">
-				<div className="creations-banner">
-					<h1 className="banner-title"><strong>Creations</strong></h1>
-					<p className="banner-subtitle-material">Select a group name to explore what's being made inside the ImagArena®.</p>
-				</div>
+      <div className="content">
+        <div className="index mosaic">
+          <div className="col-md-12 top-banner creations-banner">
+            <h1>Creations</h1>
+            <p className="banner-subtitle-material">Select a group name to explore what's being made inside the ImagArena®.</p>
+          </div>
 
-				<div className="mosaic-container">
-					<div id="loading-indicator" className={loading()}>
-						<div className="loading-container">
-							<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
-						</div>
+  				<div className="mosaic-container">
+  					<div id="loading-indicator" className={loading()}>
+  						<div className="loading-container">
+  							<img src='http://imagarenastatic.s3.amazonaws.com/loadinggif.gif' />
+  						</div>
 
-					</div>
+  					</div>
 
-					<ClassSelector default={defaultOption} reload={true} />
+  					<ClassSelector default={defaultOption} reload={true} />
 
-					<h3 id="group-name" className="main-header">{title(this.props.params.groupName)}</h3>
+  					<h3 id="group-name" className="main-header">{title(this.props.params.groupName)}</h3>
 
-					{modalInstance}
-					{levels}
-				</div>
+  					{modalInstance}
+  					{levels}
+  				</div>
 
 
+        </div>
       </div>
     );
   }

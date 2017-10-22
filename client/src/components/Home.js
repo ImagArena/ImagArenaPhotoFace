@@ -1,5 +1,4 @@
 require('normalize.css/normalize.css');
-
 require('styles/bootstrap.css');
 require('styles/custom.css');
 
@@ -55,16 +54,16 @@ class Home extends React.Component {
     return (
 			<div className="index">
         <div id="video-modal" className="modal">
-    <div className="flexer">
-      <div>
-        <div id="close-div">
-          <button title="Close (Esc)" type="button" className="video-closer" data-dismiss="modal">×</button>
+        <div className="flexer">
+          <div>
+            <div id="close-div">
+              <button title="Close (Esc)" type="button" className="video-closer" data-dismiss="modal">×</button>
+            </div>
+
+
+          </div>
         </div>
-
-
       </div>
-    </div>
-  </div>
 
       <div className="content">
         {/* banners */}
