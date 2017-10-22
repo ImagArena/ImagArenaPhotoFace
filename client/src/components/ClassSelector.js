@@ -23,7 +23,7 @@ class ClassSelector extends Component {
 	}
 
 	componentDidMount = () => {
-		Axios.get('http://ec2-54-202-229-195.us-west-2.compute.amazonaws.com/get_groupnames/').then(
+		Axios.get('http://ec2-34-212-173-131.us-west-2.compute.amazonaws.com/get_groupnames/').then(
 			function success(response) {
 				this.setState({
 					groups: response.data.map(function(x) {return {label: title(x), value: x}})
