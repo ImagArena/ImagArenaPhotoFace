@@ -270,7 +270,7 @@ class Home extends React.Component {
               <div>
                 <h3 className="text-center">Easy Setup</h3>
                 <p className="text-center">
-                  We provide all the materials, and setup is as easy as plugging into your classroom projector
+                  We provide all the materials and setup is as easy as plugging into your classroom projector.
                 </p>
               </div>
             </div>
@@ -278,7 +278,7 @@ class Home extends React.Component {
               <img src={require("../images/nomess.svg")} className="img-fluid" alt="Responsive image" />
               <div>
                 <h3 className="text-center">No Mess</h3>
-                <p className="text-center">The materials we use are completely reusable, no messy paints or clays, and each room is left as it was before.</p>
+                <p className="text-center">The materials we use are completely reusable and each room is left as it was before.</p>
               </div>
             </div>
 
