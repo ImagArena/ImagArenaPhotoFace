@@ -25,7 +25,7 @@ class Home extends React.Component {
               {/* Top Banner */}
 
               <div className="row">
-                <div className="col-md-12 top-banner">
+                <div className="col-md-12 top-banner faq-banner">
                   <h1>Frequently Asked Questions</h1>
                 </div>
               </div>

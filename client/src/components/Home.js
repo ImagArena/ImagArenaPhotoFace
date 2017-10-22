@@ -1,10 +1,9 @@
 require('normalize.css/normalize.css');
-
 require('styles/bootstrap.css');
 require('styles/custom.css');
 
 import React from 'react';
-
+import { Link } from 'react-router';
 
 class Home extends React.Component {
 
@@ -13,29 +12,9 @@ class Home extends React.Component {
 	}
 
   componentDidMount = () => {
-    var youtubeIframe = '<iframe id="youtube-vid" width="840" height="473" src="https://www.youtube.com/embed/-mhQzPnsTr4?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>'
-    var smoothScroll = function() {
-      		$('a[href^="#"]').on('click', function(e){
-
-      		e.preventDefault();
-
-      		var target = this.hash;
-      		var $target = $(target);
-
-      		$('html, body').stop().animate({
-
-      			'scrollTop': $target.offset().top-91
-
-      		}, 500, 'swing', function() {
-
-      			window.location.hash = target;
-
-      		});
-      	});
-      }
+    var youtubeIframe = '<iframe id="youtube-vid" width="840" height="473" src="https://www.youtube.com/embed/-mhQzPnsTr4?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>';
 
   $(document).ready(function(){
-    smoothScroll();
 
     $('#video-modal').on('show.bs.modal', function (event) {
       $("#bgvid").get(0).pause();
@@ -55,16 +34,16 @@ class Home extends React.Component {
     return (
 			<div className="index">
         <div id="video-modal" className="modal">
-    <div className="flexer">
-      <div>
-        <div id="close-div">
-          <button title="Close (Esc)" type="button" className="video-closer" data-dismiss="modal">×</button>
+        <div className="flexer">
+          <div>
+            <div id="close-div">
+              <button title="Close (Esc)" type="button" className="video-closer" data-dismiss="modal">×</button>
+            </div>
+
+
+          </div>
         </div>
-
-
       </div>
-    </div>
-  </div>
 
       <div className="content">
         {/* banners */}
@@ -118,7 +97,7 @@ class Home extends React.Component {
                 <br className="hidden-lg" />
                 <i className="fa fa-child fa-lg"></i> 20 Participants Max.
               </p>
-              <a href="pdf/ImagArena_Multi-Week.pdf" target="_blank"><button type="button" className="btn btn-outline-primary"><i className="fa fa-file"></i> Multi-Week Flyer</button></a>
+              <a href="https://s3.amazonaws.com/imagarenastatic/ImagArena_Multi-Week.pdf" target="_blank"><button type="button" className="btn btn-outline-primary"><i className="fa fa-file"></i> Multi-Week Flyer</button></a>
               <a href="mailto:contact@imagarena.org?subject=ImagArena Booking Request" target="_blank"><button type="button" className="btn btn-outline-primary">Request Booking Info <i className="fa fa-chevron-right"></i></button></a>
             </div>
           </div>
@@ -135,7 +114,7 @@ class Home extends React.Component {
                 <br className="hidden-lg" />
                 <i className="fa fa-child fa-lg"></i> 20 Participants Max.
               </p>
-              <a href="pdf/ImagArena_Workshop.pdf" target="_blank"><button type="button" className="btn btn-outline-primary"><i className="fa fa-file"></i> Workshop Flyer</button></a>
+              <a href="https://s3.amazonaws.com/imagarenastatic/ImagArena_Workshop.pdf" target="_blank"><button type="button" className="btn btn-outline-primary"><i className="fa fa-file"></i> Workshop Flyer</button></a>
               <a href="mailto:contact@imagarena.org?subject=ImagArena Booking Request" target="_blank"><button type="button" className="btn btn-outline-primary">Request Booking Info <i className="fa fa-chevron-right"></i></button></a>
             </div>
           </div>
@@ -151,7 +130,7 @@ class Home extends React.Component {
                 <i className="fa fa-clock-o fa-lg"></i> 45-Minute Session
                 <br className="hidden-lg" />
                 <i className="fa fa-child fa-lg"></i> 20 Participants Max.</p>
-              <a href="pdf/ImagArena_Birthday.pdf" target="_blank"><button type="button" className="btn btn-outline-primary"><i className="fa fa-file"></i> Birthday Party Flyer</button></a>
+              <a href="https://s3.amazonaws.com/imagarenastatic/ImagArena_Birthday.pdf" target="_blank"><button type="button" className="btn btn-outline-primary"><i className="fa fa-file"></i> Birthday Party Flyer</button></a>
               <a href="mailto:contact@imagarena.org?subject=ImagArena Booking Request" target="_blank"><button type="button" className="btn btn-outline-primary">Request Booking Info <i className="fa fa-chevron-right"></i></button></a>
             </div>
           </div>
@@ -234,7 +213,7 @@ class Home extends React.Component {
 
           <div className="row align-items-center smallstripe2">
             <div className="col-md">
-              <h3 className="text-center">{/* <i className="fa fa-eye fa-lg"></i> */} See what's being created <button type="button" className="btn btn-outline-light">Explore ImagArena Creations <i className="fa fa-chevron-right"></i></button></h3>
+              <h3 className="text-center">{/* <i className="fa fa-eye fa-lg"></i> */} See what's being created <Link to="/creations" className="btn btn-outline-light">Explore ImagArena Creations <i className="fa fa-chevron-right"></i></Link></h3>
             </div>
           </div>
 

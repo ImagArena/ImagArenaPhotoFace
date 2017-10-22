@@ -275,7 +275,7 @@ h3 {
   padding: 20px 0;
 }
 
-.smallstripe2 button:hover {
+.smallstripe2 .btn:hover {
   color: #f38c6b;
 }
 
@@ -334,8 +334,15 @@ h3 {
 
 .top-banner {
   text-align: center;
-  background-image: radial-gradient(circle, #88d288, #63b363);
   color: #fff;
+}
+
+.faq-banner {
+  background-image: radial-gradient(circle, #88d288, #63b363);
+}
+
+.creations-banner {
+  background-image: radial-gradient(circle,#f38c6b,#f1774f);
 }
 
 .top-banner {
@@ -574,6 +581,11 @@ h3 {
   .top-banner {
     padding: 50px 0;
   }
+
+  .top-banner.creations-banner {
+    padding: 30px 0;
+  }
+
 
   .top-banner h1 {
     font-size: 3.5em;
