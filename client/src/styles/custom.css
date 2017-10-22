@@ -275,7 +275,7 @@ h3 {
   padding: 20px 0;
 }
 
-.smallstripe2 button:hover {
+.smallstripe2 .btn:hover {
   color: #f38c6b;
 }
 

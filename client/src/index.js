@@ -21,7 +21,7 @@ browserHistory.listen(function (location) {
 // Render the main component into the dom
 ReactDOM.render((
 
-<Router history={browserHistory}>
+<Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
 
 	<Route path='/' component={Main}>
 		<IndexRoute component={Home} />

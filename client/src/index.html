@@ -14,9 +14,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script>
 		$(document).ready(function() {
-			$('.nav a').on('click', function(){
-			if (screen.width < 768)
-	    	$('.navbar-toggle').click() //bootstrap 3.x by Richard
+			$('.navbar a').on('click', function(){
+			if (screen.width < 768) {
+        console.log('fuck')
+	    	$('.navbar-toggler').click() //bootstrap 3.x by Richard
+      }
 		});
 
 	})
