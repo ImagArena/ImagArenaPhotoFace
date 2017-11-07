@@ -91,7 +91,7 @@ class Home extends React.Component {
             </div>
             <div className="col-md-6 icon">
               <h3><img src={require("../images/icon_multi.png")} className="img-fluid" alt="Responsive image" /> Multi-Week</h3>
-              <p>Over the course of 6 weeks participants create with over 30 building materials and learn strategies for overcoming creative blocks and working in teams.  At the end of the program their creations are posted online to share with family and friends.  Great for after school programs looking to add a new and exciting enrichment program to their offerings.</p>
+              <p>Over the course of 6 weeks participants create with over 30 building materials and learn strategies for overcoming creative blocks and working in teams.  At the end of the program <Link to="/creations">their creations</Link> are posted online to share with family and friends.  Great for after school programs looking to add a new and exciting enrichment program to their offerings.</p>
               <p>
                 <i className="fa fa-clock-o fa-lg"></i> (6) 45-Minute Sessions
                 <br className="hidden-lg" />
