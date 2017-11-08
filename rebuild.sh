@@ -1,5 +1,5 @@
 cd ImagArenaPhotoFace
-git pull
+sudo git pull
 cd client
-npm run dist
+sudo npm run dist
 echo "Updated Server"
