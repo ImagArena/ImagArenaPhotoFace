@@ -11,6 +11,40 @@ body p {
   font-size: 16px;
 }
 
+#alert {
+  background: red;
+  width: 100%;
+  display: block;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-right: 32px;
+  margin-top: -8px;
+  box-sizing: content-box;
+}
+  #alert.hidden {
+    display: none;
+  }
+
+#alert-close {
+  position: absolute;
+  color: white;
+  cursor: pointer;
+  right: 6px;
+  font-size: 32px;
+  top: -8px;
+}
+
+#alert .alert-content {
+  color: white;
+  padding: 15px 0px 15px 32px;
+  text-align: center;
+}
+
+#alert .alert-content a {
+  color: blue;
+  text-decoration: underline !important;
+  font-size: 16px;
+}
 
 .navbar a {
   font-size: 14px;
@@ -19,7 +53,8 @@ body p {
 
 .navbar {
   background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.24)
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.24);
+  display: block;
 }
 
 button {
@@ -33,6 +68,21 @@ button {
 
 .row .prog {
   padding-top: 20px;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+#programs-dropdown {
+  background-color: transparent;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.dropdown.show #programs-dropdown {
+  background: #86d287;
+  color: white;
 }
 
 #creations-link {

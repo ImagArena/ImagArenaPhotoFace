@@ -12,27 +12,28 @@ class Main extends React.Component {
 
 	constructor() {
 		super();
+    this.state = {
+      alertClosed: false
+    }
 	}
+  
+  closeAlert = () => {
+    this.setState({alertClosed: true});
+  }
 
 	chooseGroupName = (option) => {
 		this.setState({groupName: option.value});
 	}
-
-  handleScroll = (id) => {
-    if ($( '#' + id ).offset()) {
-      $('html, body').animate({
-          scrollTop: $( '#' + id ).offset().top - 91
-      }, 500);
-    }
-    else {
-      window.location = '/#programs';
-    }
-}
-
   render = () => {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-faded fixed-top">
+          <div id="alert" className={this.state.alertClosed ? "hidden" : null}>
+            <span id="alert-close" onClick={this.closeAlert}>&#215;</span>
+            <div className="alert-content">
+              Russian Hackers have invaded Imagarena! Click <Link to="/faq">Here</Link> for more information
+            </div>
+          </div>
           <div className="container">
 
             <Link className="navbar-brand" to="/">
@@ -46,7 +47,16 @@ class Main extends React.Component {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link href="#" className="nav-link" onClick={this.handleScroll.bind(this, 'programs')}>Programs</Link>
+                  <div className="dropdown">
+                    <button className="btn dropdown-toggle" type="button" id="programs-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Programs
+                    </button>
+                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <Link className="dropdown-item" to="/multiweek">Multiweek</Link>
+                      <Link className="dropdown-item" to="/workshop">Workshop</Link>
+                      <Link className="dropdown-item" to="/birthday">Birthday</Link>
+                    </div>
+                  </div>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/faq">FAQ</Link>
