@@ -5,7 +5,7 @@ require('styles/custom.css');
 
 import React from 'react';
 import { Link } from 'react-router';
-import Logo from '../images/logo.png';
+import Logo from '../images/black_logo_text.png';
 
 
 class Main extends React.Component {

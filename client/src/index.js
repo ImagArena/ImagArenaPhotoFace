@@ -9,6 +9,9 @@ ReactGA.initialize('UA-74261860-1');
 import Main from './components/Main';
 import Home from './components/Home';
 import FAQ from './components/FAQ';
+import MultiWeek from './components/MultiWeek';
+import Birthday from './components/Birthday';
+import Workshop from './components/Workshop';
 
 
 import Choose from './components/Choose';
@@ -27,6 +30,9 @@ ReactDOM.render((
 		<IndexRoute component={Home} />
 
     <Route path='faq' component={FAQ} />
+		<Route path='multiweek' component={MultiWeek} />
+		<Route path='birthday' component={Birthday} />
+		<Route path='workshop' component={Workshop} />
 		<Route path='creations' component={Choose} />
 		<Route path='creations/:groupName' component={Photos}/>
 	</Route>
