@@ -14,20 +14,28 @@ class Home extends React.Component {
   componentDidMount = () => {
     var youtubeIframe = '<iframe id="youtube-vid" width="840" height="473" src="https://www.youtube.com/embed/-mhQzPnsTr4?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>';
 
-  $(document).ready(function(){
+    $(document).ready(function(){
 
-    $('#video-modal').on('show.bs.modal', function (event) {
-      $("#bgvid").get(0).pause();
-      $("#close-div").after(youtubeIframe);
-      $("#youtube-vid")[0].src += "&autoplay=1";
+      $('#video-modal').on('show.bs.modal', function (event) {
+        $("#bgvid").get(0).pause();
+        $("#close-div").after(youtubeIframe);
+        $("#youtube-vid")[0].src += "&autoplay=1";
+      });
+
+      $('#video-modal').on('hide.bs.modal', function (event) {
+        $("#bgvid").get(0).play();
+        $("#youtube-vid").remove();
+      });
+
     });
+  }
 
-    $('#video-modal').on('hide.bs.modal', function (event) {
-      $("#bgvid").get(0).play();
-      $("#youtube-vid").remove();
-    });
-
-  });
+  handleScroll = () => {
+    if ($( '#welcome' ).offset()) {
+      $('html, body').animate({
+          scrollTop: $( '#welcome' ).offset().top - parseInt($('.content').css('padding-top'))
+      }, 300);
+    }
   }
 
   render = () => {
@@ -57,7 +65,7 @@ class Home extends React.Component {
                 <source src={require("../images/bgvid.mp4")} type="video/mp4" />
             </video>
 
-            <a id="down-arrow" href="#welcome"><i className="fa fa-chevron-down"></i></a>
+            <a id="down-arrow" href="#welcome" onClick={this.handleScroll}><i className="fa fa-chevron-down"></i></a>
 
           </div>
 
