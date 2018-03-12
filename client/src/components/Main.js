@@ -12,26 +12,26 @@ class Main extends React.Component {
 
 	constructor() {
 		super();
-    this.state = {
-      alertClosed: false
-    }
 	}
-  
+
   closeAlert = () => {
-    this.setState({alertClosed: true});
+    $("#app").removeClass('alerted');
   }
 
 	chooseGroupName = (option) => {
 		this.setState({groupName: option.value});
+
 	}
   render = () => {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-faded fixed-top">
-          <div id="alert" className={this.state.alertClosed ? "hidden" : null}>
-            <span id="alert-close" onClick={this.closeAlert}>&#215;</span>
+          <div id="alert">
             <div className="alert-content">
-              Russian Hackers have invaded Imagarena! Click <Link to="/faq">Here</Link> for more information
+              <span></span>
+              <span>Russian Hackers have invaded Imagarena! Click <Link to="/faq">Here</Link> for more information</span>
+              <span id="alert-close" onClick={this.closeAlert}>&#215;</span>
+
             </div>
           </div>
           <div className="container">
