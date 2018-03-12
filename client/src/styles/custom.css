@@ -82,6 +82,7 @@ button {
   background-color: transparent;
   padding: 10px 14px;
   font-size: 14px;
+  color: rgba(0,0,0,.5);
 }
 
 .dropdown.show #programs-dropdown {
@@ -117,6 +118,10 @@ button {
 
 .navbar-brand img {
   height: 30px;
+}
+
+.navbar-nav .nav-link {
+  padding-left: 15px;
 }
 
 .alerted .content {
@@ -166,8 +171,8 @@ h3 {
 .videoholder #video-play {
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -184,8 +189,8 @@ h3 {
 }
 
 .videoholder #video-play:hover {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 .videoholder h1 {
@@ -629,6 +634,15 @@ h3 {
     height: 450px;
     background: none;
   }
+  .videoholder #video-play {
+    width: 120px;
+    height: 120px;
+  }
+
+  .videoholder #video-play:hover {
+    width: 150px;
+    height: 150px;
+  }
 
   .container {
     padding: 50px;
@@ -655,6 +669,13 @@ h3 {
   }
   .navbar-nav {
     align-items: center;
+  }
+  .navbar-nav .nav-link {
+    padding-left: 0px;
+  }
+
+  #programs-dropdown:hover {
+    color: #5e5e5e;
   }
   #creations-link {
     margin: 0 0 0 12px;
