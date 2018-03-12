@@ -20,6 +20,7 @@ body p {
   padding-right: 32px;
   margin-top: -8px;
   box-sizing: content-box;
+  margin-bottom: 10px;
 }
   #app #alert{
     display: none;
@@ -125,7 +126,7 @@ button {
 }
 
 .alerted .content {
-  padding-top: 101px;
+  padding-top: 111px;
 }
 
 .content {
@@ -686,7 +687,7 @@ h3 {
   }
 
   .alerted .content {
-    padding-top: 114px;
+    padding-top: 124px;
   }
 
   .content {
