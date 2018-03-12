@@ -12,7 +12,7 @@ body p {
 }
 
 #alert {
-  background: red;
+  background: #63b363;
   width: 100%;
   display: block;
   margin-left: -16px;
@@ -86,10 +86,10 @@ button {
   color: rgba(0,0,0,.5);
 }
 
-.dropdown.show #programs-dropdown {
-  background: #86d287;
+/*.dropdown.show #programs-dropdown {
+  background: red;
   color: white;
-}
+} */
 
 #creations-link {
   border-radius: 40px;
@@ -676,7 +676,7 @@ h3 {
   }
 
   #programs-dropdown:hover {
-    color: #5e5e5e;
+    color: #000;
   }
   #creations-link {
     margin: 0 0 0 12px;
