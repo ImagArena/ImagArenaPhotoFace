@@ -29,7 +29,7 @@ class Main extends React.Component {
           <div id="alert">
             <div className="alert-content">
               <span></span>
-              <span>Russian Hackers have invaded Imagarena! Click <Link to="/faq">Here</Link> for more information</span>
+              <span>Attention directors! Now booking <Link to="/workshop">summer camp</Link> events.</span>
               <span id="alert-close" onClick={this.closeAlert}>&#215;</span>
 
             </div>

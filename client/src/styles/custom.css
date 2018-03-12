@@ -20,40 +20,35 @@ body p {
   padding-right: 32px;
   margin-top: -8px;
   box-sizing: content-box;
-  margin-bottom: 10px;
 }
-  #app #alert{
+  #alert.hidden {
     display: none;
-  }
-  #app.alerted #alert{
-    display: block;
   }
 
 #alert-close {
+  position: absolute;
   color: white;
   cursor: pointer;
+  right: 6px;
   font-size: 32px;
-  margin-left: 10px;
+  top: -8px;
 }
 
 #alert .alert-content {
   color: white;
-  padding: 15px 0px 15px 32px;
+  padding: 5px 0px 5px 32px;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 14px;
 }
 
 #alert .alert-content a {
-  color: blue;
+  color: #fff;
   text-decoration: underline !important;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .navbar a {
   font-size: 14px;
-  padding-left: 15px;
 }
 
 
@@ -121,13 +116,8 @@ button {
   height: 30px;
 }
 
-
 .content {
   padding-top: 56px;
-}
-
-.alerted .content {
-  padding-top: 160px
 }
 
 p {
@@ -169,8 +159,8 @@ h3 {
 .videoholder #video-play {
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
@@ -187,8 +177,8 @@ h3 {
 }
 
 .videoholder #video-play:hover {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .videoholder h1 {
@@ -623,9 +613,6 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  #alert {
-      margin-bottom: 10px;
-  }
 
   .videoholder h1 {
     font-size: 60px;
@@ -634,16 +621,6 @@ h3 {
   .videoholder {
     height: 450px;
     background: none;
-  }
-
-  .videoholder #video-play {
-    width: 120px;
-    height: 120px;
-  }
-
-  .videoholder #video-play:hover {
-    width: 150px;
-    height: 150px;
   }
 
   .container {
@@ -682,9 +659,6 @@ h3 {
 
   .content {
     padding-top: 91px;
-  }
-  .alerted .content {
-    padding-top: 171px;
   }
 
   .btn-lg {
@@ -842,9 +816,6 @@ h3 {
 
   .endbook {
     padding-bottom: 40px;
-  }
-  .navbar-nav .nav-link {
-    padding-left: 15px;
   }
 
 }
