@@ -17,6 +17,8 @@ import Workshop from './components/Workshop';
 import Choose from './components/Choose';
 import Photos from './components/Photos';
 
+import AddPhotos from './components/AddPhotos';
+
 browserHistory.listen(function (location) {
 		window.ga('send', 'pageview', location.pathname);
 });
@@ -34,7 +36,9 @@ ReactDOM.render((
 		<Route path='birthday' component={Birthday} />
 		<Route path='workshop' component={Workshop} />
 		<Route path='creations' component={Choose} />
-		<Route path='creations/:groupName' component={Photos}/>
+		<Route path='creations/:groupName' component={Photos} />
+
+    <Route path='add_photos' component={AddPhotos} />
 	</Route>
 
 </Router>
