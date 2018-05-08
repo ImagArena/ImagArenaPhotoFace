@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 
 function saveGroup(req, res) {
     let groupData = req.body;
-    ops.connectToMongo().then(
+    ops.connectToMongo(groupData.auth).then(
       (client) => {
         let db = client.db('imagarena_groups');
 
@@ -38,22 +38,26 @@ function saveGroup(req, res) {
 }
 
 function savePhoto(req, res) {
-  let photo = req.body;
-  ops.connectToMongo().then(
+  let photoData = req.body;
+
+  let bucketUrl = "https://s3-us-west-2.amazonaws.com/imagarenaphotos/";
+  if (!photoData.url.startsWith(bucketUrl)) {
+    res.status(400).send("Photo is not from the ImagArena Bucket");
+  }
+
+  ops.connectToMongo(photoData.auth).then(
     (client) => {
       let db = client.db('imagarena_groups');
 
-      ops.addPhoto(db.collection('photos'), photo).then(
+      ops.addPhoto(db.collection('photos'), photoData).then(
         (result) => { res.send(result) },
         (err) => {
-          res.status(500);
-          res.send(err);
+          res.status(500).send(err);
         }
       );
     },
     (err) => {
-      res.status(500);
-      res.send(err);
+      res.status(500).send(err);
     }
   );
 }

@@ -2,10 +2,10 @@ import mongodb from 'mongodb';
 
 export default {
 
-  connectToMongo() {
+  connectToMongo(auth) {
     return new Promise( (resolve, reject) => {
       let MongoClient = mongodb.MongoClient;
-      let url = "mongodb://localhost:27017/";
+      let url = `mongodb://${auth.user}:${auth.pwd}@localhost:27017/?authMechanism=DEFAULT&authSource=auth`;
 
       MongoClient.connect(url, (err, client) => {
         if (err) reject(err);
@@ -31,7 +31,6 @@ export default {
   },
 
   addPhoto(collection, photoData) {
-    // Add to AWS -> .then()
     return collection.findOne(photoData)
     .then(
       function success(photo) {
