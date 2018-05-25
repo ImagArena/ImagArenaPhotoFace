@@ -1,5 +1,6 @@
 require('normalize.css/normalize.css');
 
+require('styles/fontawesome-all.css');
 require('styles/bootstrap.css');
 require('styles/custom.css');
 
@@ -52,7 +53,7 @@ class Main extends React.Component {
                       Programs
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <Link className="dropdown-item" to="/multiweek">Multiweek</Link>
+                      <Link className="dropdown-item" to="/multiweek">Multi-Week</Link>
                       <Link className="dropdown-item" to="/workshop">Workshop</Link>
                       <Link className="dropdown-item" to="/birthday">Birthday</Link>
                     </div>
@@ -63,6 +64,9 @@ class Main extends React.Component {
                 </li>
                 <li className="nav-item">
                   <Link id="creations-link" to="/creations">Creations</Link>
+                </li>
+								<li className="nav-item">
+                  <a id="shop-link" href="https://shop.imagarena.com" target="_blank"><i className="fas fa-shopping-cart"></i> Shop</a>
                 </li>
               </ul>
             </div>
