@@ -107,6 +107,20 @@ button {
   transform: scale(1.1);
 }
 
+#shop-link {
+  border-radius: 40px;
+  color: white;
+  background: #FFA500;
+  padding: 10px 14px;
+  transition: 250ms;
+  float: left;
+  margin-bottom: 10px;
+}
+
+#shop-link:hover {
+  transform: scale(1.1);
+}
+
 #youtube-vid {
   max-width: 100%;
 }
@@ -681,6 +695,9 @@ h3 {
     color: #000;
   }
   #creations-link {
+    margin: 0 0 0 12px;
+  }
+  #shop-link {
     margin: 0 0 0 12px;
   }
 

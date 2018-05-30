@@ -71,8 +71,8 @@ class Home extends React.Component {
 
           <div id="welcome" className="banner1">
             <div className="col-lg-5">
-              <h2>Welcome to the ImagArena</h2>
-              <p>ImagArena is a new <strong>building workshop</strong> for designed to awaken the imaginative abilities of <strong>every individual</strong>.</p>
+              <h2>Welcome to the Imagination Arena</h2>
+              <p>ImagArena is a new <strong>building workshop</strong> designed to awaken the imaginative abilities of <strong>every individual</strong>.</p>
               <a href="mailto:contact@imagarena.org?subject=ImagArena Booking Request" target="_blank"><button type="button" className="btn btn-primary btn-lg">Book Now <i className="fa fa-chevron-right"></i></button></a>
             </div>
           </div>
