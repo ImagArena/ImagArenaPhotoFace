@@ -42,7 +42,33 @@ export default {
         throw err;
       }
     )
+  },
 
-  }
+  getPhotos(collection, groupName) {
+    let cursor = collection.find({groupName: groupName});
+    let photos = [];
+
+    return new Promise( (resolve, reject) => {
+      cursor.each( (err, item) => {
+          if (err)          reject(err);
+          if (item == null) resolve(photos);
+          else { photos.push(item.url) }
+      });
+    });
+  },
+
+  getGroupNames(collection) {
+    let cursor = collection.find(); // Return all
+    let groups = [];
+
+    return new Promise( (resolve, reject) => {
+      cursor.each( (err, item) => {
+          if (err)          reject(err);
+          if (item == null) resolve(groups);
+          else { groups.push(item) }
+      });
+    });
+  },
+
 
 }

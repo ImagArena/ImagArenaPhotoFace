@@ -2,7 +2,7 @@
   "name": "blah",
   "version": "0.0.1",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js $SERVERUSER $SERVERPWD"
   },
   "author": "Elliot Berman",
   "license": "MIT",

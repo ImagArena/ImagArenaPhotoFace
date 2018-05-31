@@ -18,30 +18,22 @@ class Photos extends React.Component {
 		this.pics = [];
 		this.state = {
 			showModal: false,
-			currentLevel: 0,
 			currentPhoto: 0,
-			levels: [[]],
+			photos: [],
 			loaded: false
 		 };
 	}
 
 	componentDidMount = () => {
-		Axios.post('http://ec2-34-212-173-131.us-west-2.compute.amazonaws.com/get_class_photos/', {groupName: this.props.params.groupName}).then(
-			function success(response) {
-				let levels = response.data;
-				for (var i = 0; i < levels.length; i++) {
-			    if (!levels[i].length) {
-			      levels.splice(i, 1);
-			      i--;
-			    }
-			  }
+		Axios.post('http://localhost:3001/get_class_photos/', {groupName: this.props.params.groupName}).then(
+			function success (response) {
 				this.setState({
-					levels: levels,
+					photos: response.data.photos,
 					loaded: true
 				});
 			}.bind(this),
-			function error(response) {
-				console.log(response);
+			(err) => {
+				console.log(err);
 			}
 		);
 	}
@@ -51,26 +43,20 @@ class Photos extends React.Component {
 		this.setState({ showModal: false });
 	}
 
-	open = (i, h) => {
+	open = (i) => {
 		this.setState({
 			showModal: true,
-			currentLevel: Number(i),
-			currentPhoto: Number(h)
+			currentPhoto: Number(i)
 		});
 	}
 
 	next = () => {
-		if (this.state.currentPhoto < this.state.levels[this.state.currentLevel].length - 1) {
+		if (this.state.currentPhoto < this.state.photos[this.state.currentPhoto].length - 1) {
 			this.setState({
 				currentPhoto: this.state.currentPhoto + 1
 			});
 		}
-		else if (this.state.currentLevel < this.state.levels.length - 1) {
-				this.setState({
-					currentLevel: this.state.currentLevel + 1,
-					currentPhoto: 0
-				});
-		}
+
 		else {
 			this.close();
 		}
@@ -83,12 +69,6 @@ class Photos extends React.Component {
 				currentPhoto: this.state.currentPhoto - 1
 			});
 		}
-		else if (this.state.currentLevel > 0) {
-				this.setState({
-					currentLevel: this.state.currentLevel - 1,
-					currentPhoto: this.state.levels[this.state.currentLevel - 1].length - 1
-				});
-		}
 		else {
 			this.close();
 		}
@@ -96,13 +76,7 @@ class Photos extends React.Component {
 
   render = () => {
 
-		let levels = [];
-		for (let i in this.state.levels) {
-			levels.push([<h2 className="level-number">Level {Number(i) + 1}</h2>]);
-			for (let h in this.state.levels[i]) {
-				levels[i].push(<img onClick={() => this.open(i, h)} src={this.state.levels[i][h]} key={this.state.levels[i][h]}></img>);
-			}
-		}
+		const photos = this.state.photos.map( (photo, i) => <img onClick={() => this.open(i)} src={photo} key={i}></img> )
 
 		const loading = () => {
 			return !this.state.loaded ? 'on' : null;
@@ -120,9 +94,8 @@ class Photos extends React.Component {
 				<Modal show={this.state.showModal} onHide={this.close}>
 					<a role="button" className="close" onClick={this.close}>×</a>
 					<span role="button" className="glyphicon glyphicon-chevron-left" onClick={this.prev}></span>
-			    <img src={this.state.levels[this.state.currentLevel][this.state.currentPhoto]} />
+			    <img src={this.state.photos[this.state.currentPhoto]} />
 					<span role="button" className="glyphicon glyphicon-chevron-right" onClick={this.next}></span>
-					{/*<a href={this.state.levels[this.state.currentLevel][this.state.currentPhoto]} role="button" className="glyphicon glyphicon-save" onClick={this.download} download></a>*/}
 				</Modal>
 		  </div>
 		);
@@ -154,7 +127,7 @@ class Photos extends React.Component {
   					<h3 id="group-name" className="main-header">{title(this.props.params.groupName)}</h3>
 
   					{modalInstance}
-  					{levels}
+  					{photos}
   				</div>
 
 
