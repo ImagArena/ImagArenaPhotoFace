@@ -5,7 +5,6 @@ require('styles/App.scss');
 
 import path from 'path';
 import React from 'react';
-import {Modal} from 'react-bootstrap';
 import Axios from 'axios';
 import titlecase from 'titlecase';
 
@@ -44,6 +43,7 @@ class Photos extends React.Component {
 	}
 
 	open = (i) => {
+		console.log(i);
 		this.setState({
 			showModal: true,
 			currentPhoto: Number(i)
@@ -90,15 +90,19 @@ class Photos extends React.Component {
 
 
 		const modalInstance = (
-		  <div className="static-modal">
-				<Modal show={this.state.showModal} onHide={this.close}>
+		  <div id="static-modal" className={this.state.showModal ? "" : " hidden"} onClick={this.close}>
+				<div className="modal-backdrop"></div>
+				<div className="modal-dialog">
 					<a role="button" className="close" onClick={this.close}>×</a>
 					<span role="button" className="glyphicon glyphicon-chevron-left" onClick={this.prev}></span>
 			    <img src={this.state.photos[this.state.currentPhoto]} />
 					<span role="button" className="glyphicon glyphicon-chevron-right" onClick={this.next}></span>
-				</Modal>
+				</div>
 		  </div>
 		);
+
+
+
 
 		const defaultOption = {
 			label: title(this.props.params.groupName),
@@ -112,6 +116,7 @@ class Photos extends React.Component {
           <div className="col-md-12 top-banner creations-banner">
             <h1>Creations</h1>
             <p className="banner-subtitle-material">Select a group name to explore what's being made inside the ImagArena®.</p>
+						<ClassSelector />
           </div>
 
   				<div className="mosaic-container">
@@ -122,16 +127,12 @@ class Photos extends React.Component {
 
   					</div>
 
-  					<ClassSelector default={defaultOption} reload={true} />
-
   					<h3 id="group-name" className="main-header">{title(this.props.params.groupName)}</h3>
 
-  					{modalInstance}
   					{photos}
   				</div>
-
-
         </div>
+				{modalInstance}
       </div>
     );
   }

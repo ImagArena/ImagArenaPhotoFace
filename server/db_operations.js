@@ -57,8 +57,8 @@ export default {
     });
   },
 
-  getGroupNames(collection) {
-    let cursor = collection.find(); // Return all
+  getGroupNames(collection, params) {
+    let cursor = collection.find(params);
     let groups = [];
 
     return new Promise( (resolve, reject) => {

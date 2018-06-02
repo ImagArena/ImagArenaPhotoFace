@@ -29,6 +29,7 @@ function saveGroup(req, res) {
       (client) => {
         let db = client.db('imagarena_groups');
 
+        delete groupData.auth;
         ops.addGroup(db.collection('groups'), groupData)
         .then( (result) => {
           console.log("Saved", groupData.groupName);
@@ -87,16 +88,11 @@ function getPhotosForGroup(req, res) {
   );
 }
 
-// END POST
-
-// GET
-
 function getGroupNames(req, res) {
   ops.connectToMongo({user: SERVERUSER, pwd: SERVERPWD}).then(
     (client) => {
       let db = client.db('imagarena_groups');
-
-      ops.getGroupNames(db.collection('photos'))
+      ops.getGroupNames(db.collection('groups'), req.body)
       .then(
         (result) => { res.send({groups: result}) },
         (err) => {
@@ -110,13 +106,10 @@ function getGroupNames(req, res) {
   );
 }
 
-// END GET
-
 app.post('/save_group', (req, res) => saveGroup(req, res) );
 app.post('/save_photo', (req, res) => savePhoto(req, res) );
 app.post('/get_class_photos', (req, res) => getPhotosForGroup(req, res) );
-
-app.get('/get_groupnames',   (req, res) => getGroupNames(req, res) );
+app.post('/get_groupnames',   (req, res) => getGroupNames(req, res) );
 
 let server = app.listen(3001,  () => {
     let host = server.address().address;
