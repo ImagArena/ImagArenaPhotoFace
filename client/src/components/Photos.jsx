@@ -8,7 +8,8 @@ import React from 'react';
 import Axios from 'axios';
 import titlecase from 'titlecase';
 
-import ClassSelector from './ClassSelector';
+import Modal from './Modal.jsx';
+import GroupSelector from './GroupSelector';
 
 class Photos extends React.Component {
 
@@ -43,7 +44,6 @@ class Photos extends React.Component {
 	}
 
 	open = (i) => {
-		console.log(i);
 		this.setState({
 			showModal: true,
 			currentPhoto: Number(i)
@@ -51,7 +51,7 @@ class Photos extends React.Component {
 	}
 
 	next = () => {
-		if (this.state.currentPhoto < this.state.photos[this.state.currentPhoto].length - 1) {
+		if (this.state.currentPhoto < this.state.photos.length - 1) {
 			this.setState({
 				currentPhoto: this.state.currentPhoto + 1
 			});
@@ -90,24 +90,19 @@ class Photos extends React.Component {
 
 
 		const modalInstance = (
-		  <div id="static-modal" className={this.state.showModal ? "" : " hidden"} onClick={this.close}>
-				<div className="modal-backdrop"></div>
-				<div className="modal-dialog">
-					<a role="button" className="close" onClick={this.close}>×</a>
-					<span role="button" className="glyphicon glyphicon-chevron-left" onClick={this.prev}></span>
-			    <img src={this.state.photos[this.state.currentPhoto]} />
-					<span role="button" className="glyphicon glyphicon-chevron-right" onClick={this.next}></span>
-				</div>
-		  </div>
+				<Modal show={this.state.showModal}>
+					<div className="modal-dialog">
+						<i id="prev-photo" className="fas fa-angle-left" onClick={this.prev} ></i>
+
+						<div className="modal-image-container">
+							<a role="button" className="close" onClick={this.close}>×</a>
+							<img src={this.state.photos[this.state.currentPhoto]} />
+						</div>
+
+						<i id="next-photo" className="fas fa-angle-right" onClick={this.next} ></i>
+					</div>
+				</Modal>
 		);
-
-
-
-
-		const defaultOption = {
-			label: title(this.props.params.groupName),
-			value: this.props.params.groupName
-		}
 
     return (
 
@@ -116,8 +111,9 @@ class Photos extends React.Component {
           <div className="col-md-12 top-banner creations-banner">
             <h1>Creations</h1>
             <p className="banner-subtitle-material">Select a group name to explore what's being made inside the ImagArena®.</p>
-						<ClassSelector />
           </div>
+
+					<GroupSelector />
 
   				<div className="mosaic-container">
   					<div id="loading-indicator" className={loading()}>

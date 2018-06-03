@@ -21,8 +21,6 @@ app.use((req, res, next) => {
 let SERVERUSER =  process.argv[2];
 let SERVERPWD = process.argv[3];
 
-// POST
-
 function saveGroup(req, res) {
     let groupData = req.body;
     ops.connectToMongo(groupData.auth).then(
@@ -105,6 +103,49 @@ function getGroupNames(req, res) {
     }
   );
 }
+
+function getRandomGroupName(req, res) {
+  ops.connectToMongo({user: SERVERUSER, pwd: SERVERPWD}).then(
+    (client) => {
+      let db = client.db('imagarena_groups');
+      ops.getRandomGroupName(db.collection('groups'))
+      .then(
+        (result) => {
+          res.send({groupName: result.groupName})
+        },
+        (err) => {
+          res.status(500).send(err);
+        }
+      );
+    },
+    (err) => {
+      res.status(500).send(err);
+    }
+  );
+}
+
+function getRandomPhoto(req, res) {
+  ops.connectToMongo({user: SERVERUSER, pwd: SERVERPWD}).then(
+    (client) => {
+      let db = client.db('imagarena_groups');
+      ops.getRandomPhoto(db.collection('photos'))
+      .then(
+        (result) => {
+          res.send({url: result.url});
+        },
+        (err) => {
+          res.status(500).send(err);
+        }
+      );
+    },
+    (err) => {
+      res.status(500).send(err);
+    }
+  );
+}
+
+app.get('/get_random_group', (req, res) => getRandomGroupName(req, res) );
+app.get('/get_random_photo', (req, res) => getRandomPhoto(req, res) );
 
 app.post('/save_group', (req, res) => saveGroup(req, res) );
 app.post('/save_photo', (req, res) => savePhoto(req, res) );

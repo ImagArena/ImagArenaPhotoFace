@@ -45,10 +45,9 @@ export default {
   },
 
   getPhotos(collection, groupName) {
-    let cursor = collection.find({groupName: groupName});
-    let photos = [];
-
     return new Promise( (resolve, reject) => {
+      let cursor = collection.find({groupName: groupName});
+      let photos = [];
       cursor.each( (err, item) => {
           if (err)          reject(err);
           if (item == null) resolve(photos);
@@ -58,10 +57,9 @@ export default {
   },
 
   getGroupNames(collection, params) {
-    let cursor = collection.find(params);
-    let groups = [];
-
     return new Promise( (resolve, reject) => {
+      let cursor = collection.find(params);
+      let groups = [];
       cursor.each( (err, item) => {
           if (err)          reject(err);
           if (item == null) resolve(groups);
@@ -70,5 +68,24 @@ export default {
     });
   },
 
+  getRandomGroupName(collection) {
+    return new Promise( (resolve, reject) => {
+      let cursor = collection.aggregate([{$sample: {size: 1}}]);
+      return cursor.toArray().then(
+        (results) => { resolve(results[0]) },
+        (err)     => { reject(err) }
+      )
+    });
+  },
+
+  getRandomPhoto(collection) {
+    return new Promise( (resolve, reject) => {
+      let cursor = collection.aggregate([{$sample: {size: 1}}]);
+      return cursor.toArray().then(
+        (results) => { resolve(results[0]) },
+        (err)     => { reject(err) }
+      )
+    });
+  },
 
 }

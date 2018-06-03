@@ -56,22 +56,86 @@ body {
 	margin-top: 20px;
 }
 
-.Dropdown-container {
+.modal-contents {
+	z-index: 1;
+}
+
+.group-selector {
 	width: 100%;
 	float: left;
+	display: block;
+	background: white;
+	padding: 20px;
+	min-width: 400px;
+	max-width: 100%;
+	min-height: 400px;
+	position: relative;
 
+	.close {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		font-size: 30px;
+		cursor: pointer;
+	}
 }
-	.mosaic .Dropdown-container {
+	.mosaic .group-selector {
 		/* margin-top: 40px;
 		margin-bottom: 40px;
 		*/
 	}
+
+
+#selector-choice-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin: 0 auto;
+	max-width: 500px;
+}
 
 .Dropdown-root {
 	max-width: 400px;
 	margin: 0 auto;
 	margin-top: 30px;
 	margin-bottom: 20px;
+}
+
+.imagarena-button {
+	display: block;
+	border-radius: 40px;
+	color: white;
+	padding: 10px 14px;
+	transition: 250ms;
+	outline: none;
+	border: none;
+}
+
+#find-group {
+	background: #717171;
+}
+#random-group {
+	background: #968ce0;
+}
+
+#find-group, #random-group {
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+#photo-group-submit {
+	margin: 0 auto;
+	background: #62b362;
+	margin-bottom: 10px;
+	min-width: 100px;
+
+	&:hover {
+		min-width: 120px;
+		opacity: 0.8;
+	}
 }
 
 
@@ -212,6 +276,7 @@ body {
 	align-items: center;
 	height: 100%;
 	z-index: 2;
+	justify-content: center;
 
 	user-select: none;
   -moz-user-select: none;
@@ -220,7 +285,7 @@ body {
   -o-user-select: none;
 
 	@media (min-width: 768px) {
-		width: 75%;
+		max-width: 700px;
 	}
 
 	img {
@@ -229,23 +294,44 @@ body {
 	.glyphicon, .close {
 		color: white !important;
 		opacity: 0.8;
-		position: absolute;
 		cursor: pointer;
-
 
 		&:hover {
 			text-decoration: none;
 			opacity: 1;
 		}
 	}
-	.glyphicon {
-		top: 40%;
-		font-size: 30px;
 
-		&.glyphicon-chevron-left {
+	.glyphicon {
+		position: absolute;
+	}
+
+	.modal-image-container {
+		position: relative;
+	}
+
+	.close {
+		position: absolute;
+		z-index: 10;
+		right: 10px;
+		top: -10px;
+	}
+
+	.fas {
+		font-size: 30px;
+		color: white;
+		opacity: .7;
+		cursor: pointer;
+		position: absolute;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.fa-angle-left {
 			left: 0px;
 		}
-		&.glyphicon-chevron-right {
+		&.fa-angle-right {
 			right: 0px;
 		}
 
@@ -256,12 +342,11 @@ body {
 		}
 
 		@media (min-width: 768px) {
-			top: 45%;
 			font-size: 70px;
-			&.glyphicon-chevron-left {
+			&.fa-angle-left {
 				left: -70px;
 			}
-			&.glyphicon-chevron-right {
+			&.fa-angle-right {
 				right: -70px;
 			}
 			&.glyphicon-save {
@@ -276,13 +361,11 @@ body {
 	}
 
 	.close {
-		font-size: 50px;
-		top: -10px;
+		font-size: 40px;
 		text-decoration: none !important;
 
 		@media (min-width: 768px) {
-			right: -15px;
-			font-size: 90px;
+			font-size: 70px;
 		}
 	}
 }
@@ -312,4 +395,23 @@ body {
 		font-size: 40px;
 	}
 
+}
+
+#random-pic-container {
+	max-width: 700px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+.random-photo {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	left: 0;
+	transition: 2s;
+}
+
+.transparent {
+	opacity: 0;
 }
