@@ -110,7 +110,7 @@ class Photos extends React.Component {
         <div className="index mosaic">
           <div className="col-md-12 top-banner creations-banner">
             <h1>Creations</h1>
-            <p className="banner-subtitle-material">Select a group name to explore what's being made inside the ImagArena®.</p>
+            <p className="banner-subtitle-material">Explore what's being made inside the ImagArena® by choosing an option below.</p>
           </div>
 
 					<GroupSelector />

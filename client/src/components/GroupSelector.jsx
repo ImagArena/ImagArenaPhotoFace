@@ -94,7 +94,8 @@ class GroupSelector extends Component {
 			return (
 				<div>
 					<div id="selector-choice-container">
-						<button id="find-group" className="imagarena-button" onClick={this.showModal}>Find Group</button>
+						<button id="find-group" className="imagarena-button" onClick={this.showModal}>Find Your Group</button>
+						<h4>-Or-</h4>
 						<button id="random-group" className="imagarena-button" onClick={this.viewRandomGroup}>Random Group</button>
 					</div>
 
@@ -124,7 +125,7 @@ class GroupSelector extends Component {
 							onClick={this.viewPhotosForGroup}
 							className={"imagarena-button" + (this.state.group ? "" : " hidden")}
 						>
-							Go
+							Find Group
 						</button>
 						</div>
 					</Modal>
