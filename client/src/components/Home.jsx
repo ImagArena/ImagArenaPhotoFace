@@ -286,6 +286,7 @@ class Home extends React.Component {
             </div>
 
           </div>
+					
 
           {/* <div className="row footer">
             <div className="col text-align-cetner">

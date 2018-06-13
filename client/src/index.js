@@ -34,7 +34,8 @@ ReactDOM.render((
 		<Route path='birthday' component={Birthday} />
 		<Route path='workshop' component={Workshop} />
 		<Route path='creations' component={Choose} />
-		<Route path='creations/:groupName' component={Photos}/>
+		<Route path='creations/:groupName' component={Photos} />
+
 	</Route>
 
 </Router>

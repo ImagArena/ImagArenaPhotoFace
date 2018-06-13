@@ -5,7 +5,9 @@ require('styles/App.scss');
 require('../../node_modules/react-dropdown/style.css');
 
 import React from 'react';
-import ClassSelector from './ClassSelector';
+import GroupSelector from './GroupSelector';
+import RandomPic from './RandomPic';
+
 
 
 class Choose extends React.Component {
@@ -15,13 +17,14 @@ class Choose extends React.Component {
       <div className="index content">
 
           <div className="">
-            <div className="col-md-12 top-banner creations-banner">
+            <div className="col-md-12 top-banner creations-banner ">
               <h1>Creations</h1>
-              <p className="banner-subtitle-material">Select a group name to explore what's being made inside the ImagArena®.</p>
+              <p className="banner-subtitle-material">Explore what's being made inside the ImagArena® by choosing an option below.</p>
             </div>
 				  </div>
-        <ClassSelector />
 
+        <GroupSelector />
+        <RandomPic seconds={5} />
 
 			</div>
     );

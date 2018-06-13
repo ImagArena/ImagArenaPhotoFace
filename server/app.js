@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
 import AWS from 'aws-sdk';
+import mongodb from 'mongodb';
+import ops from './db_operations';
 
 const app = express();
 
@@ -16,75 +18,143 @@ app.use((req, res, next) => {
     next();
 });
 
-var s3 = new AWS.S3();
+let SERVERUSER =  process.argv[2];
+let SERVERPWD = process.argv[3];
 
-const getS3Files = (req, res) => {
-	var s3Calls = [];
-	for (let i=1; i <= 6; i++) {
-		let week;
-		let params = {
-			Bucket: 'imagarenaphotos',
-			Delimiter: '/',
-			Prefix: req.body.groupName + '/' + i + '/'
-		}
+function saveGroup(req, res) {
+    let groupData = req.body;
+    ops.connectToMongo(groupData.auth).then(
+      (client) => {
+        let db = client.db('imagarena_groups');
 
-		let promise = new Promise((resolve, reject) => {
-			s3.listObjects(params, function (err, data) {
-				if (err) {
-					throw err;
-					reject(err);
-				}
-				else {
-					let week = data.Contents.map(function(x) {
-						return "https://imagarenaphotos.s3.amazonaws.com/" + x.Key;
-					});
-					resolve(week);
-				}
-			});
-		});
-
-		s3Calls.push(promise);
-
-	}
-
-	return Promise.all(s3Calls).then((weeks) => {
-		return weeks;
-	});
-
+        delete groupData.auth;
+        ops.addGroup(db.collection('groups'), groupData)
+        .then( (result) => {
+          console.log("Saved", groupData.groupName);
+          res.send(result);
+        })
+      },
+      (err) => {
+        res.status(500);
+        res.send(err);
+      }
+    );
 }
 
-const getGroupNames = (req, res) => {
-	let params = {
-		Bucket: 'imagarenaphotos',
-		Delimiter: '/',
-	}
+function savePhoto(req, res) {
+  let photoData = req.body;
 
-	let promise = new Promise((resolve, reject) => {
-		s3.listObjects(params, function (err, data) {
-			if (err) {
-				throw err;
-				reject(err);
-			}
-			else {
-				let groups = data.CommonPrefixes.map(function(x) {
-					return x.Prefix.replace("/", "");
-				});
-				resolve(groups);
-			}
-		});
-	});
+  let bucketUrl = "https://s3.amazonaws.com/imagarenagroupphotos/";
+  if (!photoData.url.startsWith(bucketUrl)) {
+    res.status(400).send("Photo is not from the ImagArena Bucket");
+  }
 
-	return promise.then((groups) => {
-		return groups;
-	});;
+  ops.connectToMongo(photoData.auth).then(
+    (client) => {
+      let db = client.db('imagarena_groups');
+
+      ops.addPhoto(db.collection('photos'), photoData).then(
+        (result) => { res.send(result) },
+        (err) => {
+          res.status(500).send(err);
+        }
+      );
+    },
+    (err) => {
+      res.status(500).send(err);
+    }
+  );
 }
 
-app.post('/get_class_photos', (req, res) => getS3Files(req, res).then( (weeks) => res.send(weeks) ) );
-app.get('/get_groupnames', (req, res) => getGroupNames(req, res).then( (groups) => res.send(groups) ) );
+function getPhotosForGroup(req, res) {
+  ops.connectToMongo({user: SERVERUSER, pwd: SERVERPWD}).then(
+    (client) => {
+      let db = client.db('imagarena_groups');
+      let groupName = req.body.groupName;
 
-var server = app.listen(3001,  () => {
-    var host = server.address().address;
-    var port = server.address().port;
+      ops.getPhotos(db.collection('photos'), groupName)
+      .then(
+        (result) => { res.send({photos: result}); },
+        (err) => {
+          res.status(500).send(err);
+        }
+      );
+    },
+    (err) => {
+      res.status(500).send(err);
+    }
+  );
+}
+
+function getGroupNames(req, res) {
+  ops.connectToMongo({user: SERVERUSER, pwd: SERVERPWD}).then(
+    (client) => {
+      let db = client.db('imagarena_groups');
+      ops.getGroupNames(db.collection('groups'), req.body)
+      .then(
+        (result) => { res.send({groups: result}) },
+        (err) => {
+          res.status(500).send(err);
+        }
+      );
+    },
+    (err) => {
+      res.status(500).send(err);
+    }
+  );
+}
+
+function getRandomGroupName(req, res) {
+  ops.connectToMongo({user: SERVERUSER, pwd: SERVERPWD}).then(
+    (client) => {
+      let db = client.db('imagarena_groups');
+      ops.getRandomGroupName(db.collection('groups'))
+      .then(
+        (result) => {
+          res.send({groupName: result.groupName})
+        },
+        (err) => {
+          res.status(500).send(err);
+        }
+      );
+    },
+    (err) => {
+      res.status(500).send(err);
+    }
+  );
+}
+
+function getRandomPhoto(req, res) {
+  ops.connectToMongo({user: SERVERUSER, pwd: SERVERPWD}).then(
+    (client) => {
+      let db = client.db('imagarena_groups');
+      ops.getRandomPhoto(db.collection('photos'))
+      .then(
+        (result) => {
+          res.send({url: result.url});
+        },
+        (err) => {
+          res.status(500).send(err);
+        }
+      );
+    },
+    (err) => {
+      res.status(500).send(err);
+    }
+  );
+}
+
+app.get('/get_random_group', (req, res) => getRandomGroupName(req, res) );
+app.get('/get_random_photo', (req, res) => getRandomPhoto(req, res) );
+
+app.post('/save_group', (req, res) => saveGroup(req, res) );
+app.post('/save_photo', (req, res) => savePhoto(req, res) );
+app.post('/get_class_photos', (req, res) => getPhotosForGroup(req, res) );
+app.post('/get_groupnames',   (req, res) => getGroupNames(req, res) );
+
+let server = app.listen(3001,  () => {
+    let host = server.address().address;
+    let port = server.address().port;
 
     console.log('node listening at http://%s:%s', host, port);
 });
