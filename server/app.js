@@ -44,7 +44,7 @@ function saveGroup(req, res) {
 function savePhoto(req, res) {
   let photoData = req.body;
 
-  let bucketUrl = "https://s3-us-west-2.amazonaws.com/imagarenaphotos/";
+  let bucketUrl = "https://s3.amazonaws.com/imagarenagroupphotos/";
   if (!photoData.url.startsWith(bucketUrl)) {
     res.status(400).send("Photo is not from the ImagArena Bucket");
   }

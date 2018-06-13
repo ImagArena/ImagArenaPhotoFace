@@ -20,7 +20,8 @@ class GroupSelector extends Component {
 		super();
 		this.state = {
 			regions: ["Boston"],
-			seasons: ["Winter 2018", "Spring 2018"],
+			seasons: ["Spring", "Summer", "Fall", "Winter"],
+			years: ["2016", "2017", "2018"],
 			groups: [],
 		}
 	}
@@ -36,11 +37,11 @@ class GroupSelector extends Component {
 		this.setState({showModal: true});
 	}
 
-	getGroupNames = (region, seasonInfo) => {
+	getGroupNames = (region, year, season) => {
 		let query = {
 			region: region,
-			season: seasonInfo.season,
-			year: Number(seasonInfo.year)
+			year: Number(year),
+			season: season
 		}
 
 		Axios.post('http://localhost:3001/get_groupnames/', query).then(
@@ -56,16 +57,17 @@ class GroupSelector extends Component {
 	}
 
 	chooseRegion = (option) => {
+		this.getGroupNames(option.value, this.state.year, this.state.season);
 		this.setState({region: option.value});
 	}
 
+	chooseYear = (option) => {
+		this.getGroupNames(this.state.region, option.value, this.state.season);
+		this.setState({year: option.value});
+	}
+
 	chooseSeason = (option) => {
-		let splitSeason = option.value.split(" ");
-		let seasonInfo = {
-			season: splitSeason[0],
-			year:   splitSeason[1]
-		}
-		this.getGroupNames(this.state.region, seasonInfo);
+		this.getGroupNames(this.state.region, this.state.year, option.value);
 		this.setState({season: option.value});
 	}
 
@@ -75,13 +77,17 @@ class GroupSelector extends Component {
 
 	viewPhotosForGroup = () => {
 		browserHistory.push('/creations/' + this.state.group);
+		this.closeModal();
 	}
 
 	viewRandomGroup = () => {
 		Axios.get('http://localhost:3001/get_random_group').then(
 			(response) => {
-				this.setState({group: response.data.groupName});
-				this.viewPhotosForGroup();
+				this.setState({
+					group: response.data.groupName
+				}, () => {
+					this.viewPhotosForGroup();
+				});
 			},
 			(err)      => {
 				console.error(err);
@@ -108,11 +114,17 @@ class GroupSelector extends Component {
 												value={this.state.region}
 												placeholder="Select Region"
 							/>
+						<Dropdown options={this.state.years}
+												onChange={this.chooseYear}
+												value={this.state.year}
+												placeholder="Select Year"
+												className={this.state.region ? "" : "hidden"}
+							/>
 							<Dropdown options={this.state.seasons}
 												onChange={this.chooseSeason}
 												value={this.state.season}
 												placeholder="Select Season"
-												className={this.state.region ? "" : "hidden"}
+												className={this.state.year ? "" : "hidden"}
 							/>
 							<Dropdown options={this.state.groups}
 												onChange={this.chooseGroupName}

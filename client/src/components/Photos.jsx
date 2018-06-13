@@ -24,8 +24,8 @@ class Photos extends React.Component {
 		 };
 	}
 
-	componentDidMount = () => {
-		Axios.post('http://localhost:3001/get_class_photos/', {groupName: this.props.params.groupName}).then(
+	getPhotos = (groupName) => {
+		Axios.post('http://localhost:3001/get_class_photos/', {groupName: groupName}).then(
 			function success (response) {
 				this.setState({
 					photos: response.data.photos,
@@ -36,6 +36,14 @@ class Photos extends React.Component {
 				console.log(err);
 			}
 		);
+	}
+
+	componentDidMount = () => {
+		this.getPhotos(this.props.params.groupName);
+	}
+
+	componentWillReceiveProps(nextProps){
+		this.getPhotos(nextProps.params.groupName);
 	}
 
 
