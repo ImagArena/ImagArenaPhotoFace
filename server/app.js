@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({extended: false, limit: '50mb'}));
 app.use(bodyParser.json({limit: '50mb'}));
 
 let logger = function(req, res, next) {
-    console.log(req.url);
+    let now = new Date();
+    console.log(`${now}: ${req.url} from ip ${req.connection.remoteAddress}`);
     next(); // Passing the request to the next handler in the stack.
 }
 app.use(logger);
@@ -162,7 +163,7 @@ app.post('/save_photo', (req, res) => savePhoto(req, res) );
 app.post('/get_class_photos', (req, res) => getPhotosForGroup(req, res) );
 app.post('/get_groupnames',   (req, res) => getGroupNames(req, res) );
 
-let server = app.listen(80,  () => {
+let server = app.listen(3001,  () => {
     let host = server.address().address;
     let port = server.address().port;
 
