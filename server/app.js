@@ -10,6 +10,12 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false, limit: '50mb'}));
 app.use(bodyParser.json({limit: '50mb'}));
 
+let logger = function(req, res, next) {
+    console.log(req.url);
+    next(); // Passing the request to the next handler in the stack.
+}
+app.use(logger);
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use((req, res, next) => {
@@ -37,6 +43,7 @@ function saveGroup(req, res) {
       (err) => {
         res.status(500);
         res.send(err);
+	console.log(err);
       }
     );
 }
@@ -46,6 +53,7 @@ function savePhoto(req, res) {
 
   let bucketUrl = "https://s3.amazonaws.com/imagarenagroupphotos/";
   if (!photoData.url.startsWith(bucketUrl)) {
+    console.error("Invalid Photo: ", "\n", photoData);
     res.status(400).send("Photo is not from the ImagArena Bucket");
   }
 
@@ -53,6 +61,7 @@ function savePhoto(req, res) {
     (client) => {
       let db = client.db('imagarena_groups');
 
+      delete photoData.auth;
       ops.addPhoto(db.collection('photos'), photoData).then(
         (result) => { res.send(result) },
         (err) => {
@@ -144,6 +153,7 @@ function getRandomPhoto(req, res) {
   );
 }
 
+
 app.get('/get_random_group', (req, res) => getRandomGroupName(req, res) );
 app.get('/get_random_photo', (req, res) => getRandomPhoto(req, res) );
 
@@ -152,7 +162,7 @@ app.post('/save_photo', (req, res) => savePhoto(req, res) );
 app.post('/get_class_photos', (req, res) => getPhotosForGroup(req, res) );
 app.post('/get_groupnames',   (req, res) => getGroupNames(req, res) );
 
-let server = app.listen(3001,  () => {
+let server = app.listen(80,  () => {
     let host = server.address().address;
     let port = server.address().port;
 
