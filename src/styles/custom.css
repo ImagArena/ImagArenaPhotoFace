@@ -57,6 +57,10 @@ body p {
   font-size: 14px;
 }
 
+.stock {
+  border-radius: 10px;
+}
+
 
 .navbar {
   background: rgba(255, 255, 255, 0.95);
@@ -359,8 +363,19 @@ h3 {
 .stripe1 {
     width: 100%;
     color: #fff;
-    background-image: radial-gradient(circle, #ecc169, #e4b34f);
     margin: 0 auto;
+}
+
+.stripe-orange {
+  background-image: radial-gradient(circle, #ecc169, #e4b34f);
+}
+
+.stripe-gray {
+  background-color: white;
+}
+
+.stripe10 {
+  background-color: #d9d9d9;
 }
 
 .stripe1 img {
@@ -370,8 +385,8 @@ h3 {
 
 .stripe2 {
     padding: 35px;
-    color: #fff;
-    background-image: radial-gradient(circle, #4f89d4, #3063a5);
+    color: black;
+    /*background-image: radial-gradient(circle, #4f89d4, #3063a5);*/
 }
 
 .stripe4 {
@@ -397,7 +412,14 @@ h3 {
   padding: 20px 0;
 }
 
-.smallstripe2 .btn:hover {
+.smallstripe-home {
+  color: #fff;
+  background-image: url(../images/pattern.png);
+  background-color: #adadad;
+  padding: 40px;
+}
+
+.smallstripe-home .btn:hover {
   color: #696969;
 }
 
@@ -475,12 +497,41 @@ h3 {
   max-width: 85%;
 }
 
+.text-center {
+  margin: 0px;
+}
+
+.header-image {
+  min-width: 15%;
+}
+
 .faq-banner {
   background-image: radial-gradient(circle,#f38c6b,#f1774f);
 }
 
 .multi-banner {
-  background-image: radial-gradient(circle,#1e88c5,#126893);
+  background-image: radial-gradient(circle,#ff5a5a,#ea3232);
+  padding: 0px;
+}
+
+.red {
+  background-image: radial-gradient(circle,#ff5a5a,#ea3232);
+}
+
+.green {
+  background-image: radial-gradient(circle, #88d288, #63b363);
+}
+
+.blue {
+  background-image: radial-gradient(circle, #1e88c5, #126893);
+}
+
+.whitetext{
+  color: white;
+}
+
+.yellow {
+  background-image: radial-gradient(circle,#d8e55e,#f4c20d);
 }
 
 .workshop-banner {
@@ -505,7 +556,7 @@ h3 {
 
 
 .top-banner {
-  padding: 20px 0;
+  
 }
 
 .top-banner h1 {
@@ -742,7 +793,7 @@ h3 {
   }
 
   .smallstripe2 {
-    padding: 40px;
+    padding: 10px;
   }
 
   .smallstripe3 {
@@ -786,8 +837,8 @@ h3 {
     font-size: 1.2em;
   }
 
-  .top-banner {
-    padding: 50px 0;
+  .img-test{
+    max-height: 100px;
   }
 
   .top-banner.creations-banner {
@@ -800,6 +851,7 @@ h3 {
 
   .smallstripe4 .glyphboy p {
     font-weight: bold;
+    font-size: 14px;
   }
 
 

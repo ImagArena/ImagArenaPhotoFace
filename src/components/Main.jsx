@@ -11,30 +11,30 @@ import Logo from '../images/black_logo_text.png';
 
 class Main extends React.Component {
 
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
   closeAlert = () => {
     $("#app").removeClass('alerted');
   }
 
-	chooseGroupName = (option) => {
-		this.setState({groupName: option.value});
+  chooseGroupName = (option) => {
+    this.setState({ groupName: option.value });
 
-	}
+  }
   render = () => {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-faded fixed-top">
-          <div id="alert">
+          {/*<div id="alert">
             <div className="alert-content">
               <span></span>
               <span>Attention directors! Now booking <Link to="/workshop">summer camp</Link> events.</span>
               <span id="alert-close" onClick={this.closeAlert}>&#215;</span>
 
             </div>
-          </div>
+    </div>*/}
           <div className="container">
 
             <Link className="navbar-brand" to="/">
@@ -53,9 +53,9 @@ class Main extends React.Component {
                       Programs
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <Link className="dropdown-item" to="/multiweek">Multi-Week</Link>
-                      <Link className="dropdown-item" to="/workshop">Workshop</Link>
-                      <Link className="dropdown-item" to="/birthday">Birthday</Link>
+                      <Link className="dropdown-item" to="kids">Kids</Link>
+                      <Link className="dropdown-item" to="families">Families</Link>
+                      <Link className="dropdown-item" to="adults">Adults</Link>
                     </div>
                   </div>
                 </li>
@@ -63,11 +63,11 @@ class Main extends React.Component {
                   <Link className="nav-link" to="/faq">FAQ</Link>
                 </li>
                 <li className="nav-item">
-                  <Link id="creations-link" to="/creations">Creations</Link>
+                  <Link id="creations-link" to="/creations">Call To Action</Link>
                 </li>
-								<li className="nav-item">
+                {/*<li className="nav-item">
                   <a id="shop-link" href="https://shop.imagarena.com" target="_blank"><i className="fas fa-shopping-cart"></i> Shop</a>
-                </li>
+    </li>*/}
               </ul>
             </div>
 
