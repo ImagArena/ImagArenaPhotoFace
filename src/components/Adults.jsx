@@ -36,7 +36,7 @@ class Home extends React.Component {
 				<PicBanner
 					title="Tikka Test Tuesday Tom"
 					text={<p>This is a test of <strong>text tommy texty</strong>.</p>}
-					image="massachusetts"
+					image="multiweek"
 				/>
 
 				<Details
