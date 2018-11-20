@@ -12,6 +12,7 @@ import FAQ from './components/FAQ';
 import Kids from './components/Kids';
 import Families from './components/Families';
 import Adults from './components/Adults';
+import Footer from './components/Footer'
 
 
 import Choose from './components/Choose';
@@ -23,20 +24,23 @@ browserHistory.listen(function (location) {
 
 // Render the main component into the dom
 ReactDOM.render((
+	<div>
+		<Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
 
-	<Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+			<Route path='/' component={Main}>
+				<IndexRoute component={Home} />
 
-		<Route path='/' component={Main}>
-			<IndexRoute component={Home} />
+				<Route path='faq' component={FAQ} />
+				<Route path='kids' component={Kids} />
+				<Route path='families' component={Families} />
+				<Route path='adults' component={Adults} />
+				<Route path='creations' component={Choose} />
+				<Route path='creations/:groupName' component={Photos} />
 
-			<Route path='faq' component={FAQ} />
-			<Route path='kids' component={Kids} />
-			<Route path='families' component={Families} />
-			<Route path='adults' component={Adults} />
-			<Route path='creations' component={Choose} />
-			<Route path='creations/:groupName' component={Photos} />
+			</Route>
 
-		</Route>
+		</Router>
+		<Footer />
+	</div>
 
-	</Router>
 ), document.getElementById('app'));

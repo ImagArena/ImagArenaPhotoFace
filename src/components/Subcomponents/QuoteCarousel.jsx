@@ -9,7 +9,7 @@ export default class QuoteCarousel extends Component {
 
   render = () => {
     return (
-      <div className="row">
+      <div className="carousel-row">
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="0">
           <ol className="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>

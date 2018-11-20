@@ -101,7 +101,7 @@ class Home extends React.Component {
             <div className="row">
               <div className="col-lg-2">
               </div>
-              <div className="col-lg-8">
+              <div className="col-lg-8 program-descriptions">
                 <center><h1>Our Programs</h1>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p></center>
               </div>
@@ -257,14 +257,14 @@ class Home extends React.Component {
                 <img src={require("../images/ontime.svg")} className="img-fluid" alt="Responsive image" />
                 <div>
                   <h3 className="text-center">On Time</h3>
-                  <p className="text-center">Our instructors always arrive early to ensure a punctual start time for each session.</p>
+                  <p className="text-center bottom-home">Our instructors always arrive early to ensure a punctual start time for each session.</p>
                 </div>
               </div>
               <div className="col-md glyphboy">
                 <img src={require("../images/plugplay.svg")} className="img-fluid" alt="Responsive image" />
                 <div>
                   <h3 className="text-center">Easy Setup</h3>
-                  <p className="text-center">
+                  <p className="text-center bottom-home">
                     We provide all the materials and setup is as easy as plugging into your classroom projector.
                 </p>
                 </div>
@@ -273,7 +273,7 @@ class Home extends React.Component {
                 <img src={require("../images/nomess.svg")} className="img-fluid" alt="Responsive image" />
                 <div>
                   <h3 className="text-center">No Mess</h3>
-                  <p className="text-center nobold">The materials we use are completely reusable and each room is left as it was before.</p>
+                  <p className="text-center nobold bottom-home">The materials we use are completely reusable and each room is left as it was before.</p>
                 </div>
               </div>
 
@@ -286,6 +286,7 @@ class Home extends React.Component {
             </div>
           </div> */}
           </div>
+
         </div>
       </div>
     );

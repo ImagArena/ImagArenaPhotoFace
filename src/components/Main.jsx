@@ -50,20 +50,20 @@ class Main extends React.Component {
                 <li className="nav-item">
                   <div className="dropdown">
                     <button className="btn dropdown-toggle" type="button" id="programs-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Programs
+                      <strong>Programs</strong>
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <Link className="dropdown-item" to="kids">Kids</Link>
-                      <Link className="dropdown-item" to="families">Families</Link>
-                      <Link className="dropdown-item" to="adults">Adults</Link>
+                      <Link className="dropdown-item" to="kids"><strong>Kids</strong></Link>
+                      <Link className="dropdown-item" to="families"><strong>Families</strong></Link>
+                      <Link className="dropdown-item" to="adults"><strong>Adults</strong></Link>
                     </div>
                   </div>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/faq">FAQ</Link>
+                  <Link className="nav-link" to="/faq"><strong>FAQ</strong></Link>
                 </li>
                 <li className="nav-item">
-                  <Link id="creations-link" to="/creations">Call To Action</Link>
+                  <Link id="creations-link" to="/creations"><strong>Call To Action</strong></Link>
                 </li>
                 {/*<li className="nav-item">
                   <a id="shop-link" href="https://shop.imagarena.com" target="_blank"><i className="fas fa-shopping-cart"></i> Shop</a>

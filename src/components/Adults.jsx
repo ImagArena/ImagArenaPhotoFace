@@ -8,6 +8,7 @@ import SectionHeader from './Subcomponents/SectionHeader';
 import Details from './Subcomponents/Details';
 import InfoContainer from './Subcomponents/InfoContainer';
 import QuoteCarousel from './Subcomponents/QuoteCarousel';
+import FullPicBanner from './Subcomponents/FullPicBanner'
 
 
 class Home extends React.Component {
@@ -29,14 +30,14 @@ class Home extends React.Component {
 			<div>
 
 				<ProgramHeader
-					color="green"
+					color="blue"
 					image="adultstext"
 				/>
 
-				<PicBanner
-					title="Tikka Test Tuesday Tom"
-					text={<p>This is a test of <strong>text tommy texty</strong>.</p>}
-					image="multiweek"
+				<FullPicBanner
+					title="This is a test"
+					text={<p>This is another test of the text component, to see whether or not it is the correct size and <strong>if this will look good when bolded.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>}
+					bannerPic="adult"
 				/>
 
 				<Details
