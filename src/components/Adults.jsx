@@ -31,7 +31,7 @@ class Home extends React.Component {
 
 				<ProgramHeader
 					color="blue"
-					image="adultstext"
+					image="teambuilding_text"
 				/>
 
 				<FullPicBanner
@@ -51,7 +51,7 @@ class Home extends React.Component {
 				<InfoContainer
 					image="multiweek"
 					text={<p>This is a test of <strong>text tommy texty</strong>.</p>}
-					cta="Request Workshop Booking Info"
+					cta="Request Booking Info"
 				/>
 
 				<QuoteCarousel

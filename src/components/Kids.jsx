@@ -25,24 +25,50 @@ class Home extends React.Component {
 		})
 	}
 
+	handleWorkshop = () => {
+		if ($('#workshop').offset()) {
+		  $('html, body').animate({
+			scrollTop: $('#workshop').offset().top - parseInt($('.content').css('padding-top'))
+		  }, 300);
+		}
+	  }
+
+	  handleMulti = () => {
+		if ($('#multi').offset()) {
+		  $('html, body').animate({
+			scrollTop: $('#multi').offset().top - parseInt($('.content').css('padding-top'))
+		  }, 300);
+		}
+	  }
+
+	  handleBirthday = () => {
+		if ($('#birthday').offset()) {
+		  $('html, body').animate({
+			scrollTop: $('#birthday').offset().top - parseInt($('.content').css('padding-top'))
+		  }, 300);
+		}
+	  }
+
 	render = () => {
 		return (
 			<div>
 
 				<ProgramHeader
 					color="red"
-					image="kidstext"
+					image="kidsprograms_text"
 				/>
 
 				<FullPicBanner
 					title="This is a test"
-					text={<p>This is another test of the text component, to see whether or not it is the correct size and <strong>if this will look good when bolded.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>}
+					text={<p>This is another test of the text component, to see whether or not it is the correct size and <strong>if this will look good when bolded.</strong> <a href="#workshop" onClick={this.handleWorkshop}>WORKSHOP</a> or you can pick a <a href="#multi" onClick={this.handleMulti}>MULTIWEEK</a> or a <a href="#birthday" onClick={this.handleBirthday}>BIRTHDAY PARTY</a></p>}
 					bannerPic="kid"
 				/>
 
-				<SectionHeader
-					image="workshoptext"
-				/>
+				<div id="workshop">
+					<SectionHeader
+						image="workshoptext"
+					/>
+				</div>
 				<Details
 					imgOne="duration"
 					textOne="45 Minute Session"
@@ -57,9 +83,11 @@ class Home extends React.Component {
 					cta="Request Booking Info"
 				/>
 
-				<SectionHeader
-					image="multitext"
-				/>
+				<div id="multi">
+					<SectionHeader
+						image="multitext"
+					/>
+				</div>
 				<Details
 					imgOne="calendar"
 					textOne="(6) 45 Minute Sessions"
@@ -74,9 +102,11 @@ class Home extends React.Component {
 					cta="Request Booking Info"
 				/>
 
-				<SectionHeader
-					image="birthdaytext"
-				/>
+				<div id="birthday">
+					<SectionHeader
+						image="birthdaytext"
+					/>
+				</div>
 				<Details
 					imgOne="duration"
 					textOne="45 Minute Session"
@@ -88,7 +118,7 @@ class Home extends React.Component {
 				<InfoContainer
 					image="multiweek"
 					text={<p>This is a test of <strong>text tommy texty</strong>.</p>}
-					cta="Request Workshop Info"
+					cta="Request Booking Info"
 				/>
 
 				<QuoteCarousel

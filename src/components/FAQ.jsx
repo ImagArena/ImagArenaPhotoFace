@@ -37,7 +37,7 @@ class Home extends React.Component {
               <span className="arrow"><i className="fa fa-chevron-right"></i></span>&nbsp;
               What’s the cost?
                 </h4>
-            <p className="answer">The cost of the program depends on group size and the number of groups.  <a href="mailto:contact@imagarena.org?subject=ImagArena Booking Request" target="_blank">Contact us</a> to get an exact quote for your organization.
+            <p className="answer">The cost of the program depends on group size and the number of groups.  <a href="mailto:contact@imagarena.com?subject=ImagArena Booking Request" target="_blank">Contact us</a> to get an exact quote for your organization.
 
                 </p>
             {/* END FAQ Component */}
@@ -102,6 +102,60 @@ class Home extends React.Component {
               How long are the sessions?
                 </h4>
             <p className="answer">With the exception of the 30 minute Workshop, all ImagArena sessions run approximately 45-50 minutes.
+                </p>
+            {/* END FAQ Component */}
+
+            {/* FAQ Componen */}
+            <h4 className="question">
+              <span className="arrow"><i className="fa fa-chevron-right"></i></span>&nbsp;
+              Can the programs be mixed age groups?
+                </h4>
+            <p className="answer">We encourage mixed age groups for all of our programs.
+                </p>
+            {/* END FAQ Component */}
+
+            {/* FAQ Componen */}
+            <h4 className="question">
+              <span className="arrow"><i className="fa fa-chevron-right"></i></span>&nbsp;
+              Can the programs be mixed age groups?
+                </h4>
+            <p className="answer">We encourage mixed age groups for all of our programs.
+                </p>
+            {/* END FAQ Component */}
+
+            {/* FAQ Componen */}
+            <h4 className="question">
+              <span className="arrow"><i className="fa fa-chevron-right"></i></span>&nbsp;
+              Can the programs be mixed age groups?
+                </h4>
+            <p className="answer">We encourage mixed age groups for all of our programs.
+                </p>
+            {/* END FAQ Component */}
+
+            {/* FAQ Componen */}
+            <h4 className="question">
+              <span className="arrow"><i className="fa fa-chevron-right"></i></span>&nbsp;
+              Can the programs be mixed age groups?
+                </h4>
+            <p className="answer">We encourage mixed age groups for all of our programs.
+                </p>
+            {/* END FAQ Component */}
+
+            {/* FAQ Componen */}
+            <h4 className="question">
+              <span className="arrow"><i className="fa fa-chevron-right"></i></span>&nbsp;
+              Can the programs be mixed age groups?
+                </h4>
+            <p className="answer">We encourage mixed age groups for all of our programs.
+                </p>
+            {/* END FAQ Component */}
+
+            {/* FAQ Componen */}
+            <h4 className="question">
+              <span className="arrow"><i className="fa fa-chevron-right"></i></span>&nbsp;
+              Can the programs be mixed age groups?
+                </h4>
+            <p className="answer">We encourage mixed age groups for all of our programs.
                 </p>
             {/* END FAQ Component */}
 

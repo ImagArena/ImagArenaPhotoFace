@@ -31,9 +31,9 @@ ReactDOM.render((
 				<IndexRoute component={Home} />
 
 				<Route path='faq' component={FAQ} />
-				<Route path='kids' component={Kids} />
-				<Route path='families' component={Families} />
-				<Route path='adults' component={Adults} />
+				<Route path='kidsprograms' component={Kids} />
+				<Route path='familyevents' component={Families} />
+				<Route path='teambuilding' component={Adults} />
 				<Route path='creations' component={Choose} />
 				<Route path='creations/:groupName' component={Photos} />
 

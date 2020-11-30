@@ -9,7 +9,7 @@ export default class SectionHeader extends Component {
 
   render = () => {
     return (
-      <div className="row align-items-center smallstripe2">
+      <div className="row smallstripe2">
         <div className="col-md-12 top-banner">
           <img src={require("../../images/" + this.props.image + ".png")} className="header-image" alt="Responsive image" />
         </div>

@@ -16,7 +16,7 @@ export default class InfoContainer extends Component {
           </div>
           <div className="col-lg prog-text">
             {this.props.text}
-            <a href="mailto:contact@imagarena.org?subject=ImagArena Booking Request" target="_blank"><button type="button" className="btn btn-outline-primary-blue">{this.props.cta} <i className="fa fa-chevron-right"></i></button></a>
+            <a href="mailto:contact@imagarena.com?subject=ImagArena Booking Request" target="_blank"><button type="button" className="btn btn-outline-primary-blue">{this.props.cta} <i className="fa fa-chevron-right"></i></button></a>
           </div>
         </div>
       </div>

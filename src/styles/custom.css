@@ -1,6 +1,7 @@
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #373737;
+  font-weight: 400;
 }
 
 a {
@@ -17,6 +18,16 @@ strong {
 
 p {
   margin-top: 0px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 500px;
 }
 
 #alert {
@@ -108,7 +119,7 @@ button {
 #creations-link {
   border-radius: 40px;
   color: white;
-  background: #adadad;
+  background: #4e89d4;
   padding: 10px 14px;
   transition: 250ms;
   float: left;
@@ -169,13 +180,9 @@ button {
   padding-top: 56px;
 }
 
-p {
-  font-weight: 400;
-  font-size: 14px;
-}
-
 h2 {
   font-size: 37px;
+  font-weight: 700;
 }
 
 h3 {
@@ -195,6 +202,10 @@ h3 {
   background-color: #232323;
   color: #6b6b6b;
   padding: 15px;
+}
+
+.footer-footer p {
+  font-weight: 500;
 }
 
 .text-center p {
@@ -319,11 +330,13 @@ h3 {
 
 .btn-primary {
   background: #4e89d4;
+  border-color: transparent;
 }
 
 .btn-primary:hover {
   background: #4e89d4;
   transform: scale(1.1);
+  border-color: transparent;
 }
 
 .btn-outline-primary-blue {
@@ -335,7 +348,7 @@ h3 {
 
 .btn-outline-primary-blue:hover {
   transform: scale(1.1);
-  border-color: #1e88c5;
+  border-color: none;
   background: #1e88c5;
 }
 
@@ -404,7 +417,7 @@ font-size: 16px;
     margin: 0 auto;
 }
 
-.stripe-orange {
+.orange {
   background-image: radial-gradient(circle, #ecc169, #e4b34f);
 }
 
@@ -448,6 +461,7 @@ font-size: 16px;
   background-image: url(../images/pattern.png);
   background-color: #adadad;
   padding: 20px 0;
+  margin-left: 0px;
 }
 
 .smallstripe-home {
@@ -485,11 +499,6 @@ font-size: 16px;
 
 .glyphboy2 {
   align-content: center;
-}
-
-.smallstripe2 img {
-  max-width: 50px;
-  color: #373737;
 }
 
 .smallstripe img{
@@ -540,7 +549,7 @@ font-size: 16px;
 }
 
 .header-image {
-  min-width: 15%;
+  width: 300px;
 }
 
 .faq-banner {
@@ -863,6 +872,7 @@ font-size: 16px;
 
   .smallstripe2 {
     padding: 10px;
+    width: 100%;
   }
 
   .smallstripe3 {

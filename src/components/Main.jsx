@@ -53,9 +53,9 @@ class Main extends React.Component {
                       <strong>Programs</strong>
                     </button>
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <Link className="dropdown-item" to="kids"><strong>Kids</strong></Link>
-                      <Link className="dropdown-item" to="families"><strong>Families</strong></Link>
-                      <Link className="dropdown-item" to="adults"><strong>Adults</strong></Link>
+                      <Link className="dropdown-item" to="kidsprograms"><strong>Kids Programs</strong></Link>
+                      <Link className="dropdown-item" to="familyevents"><strong>Family Events</strong></Link>
+                      <Link className="dropdown-item" to="teambuilding"><strong>Team Building</strong></Link>
                     </div>
                   </div>
                 </li>
@@ -63,7 +63,7 @@ class Main extends React.Component {
                   <Link className="nav-link" to="/faq"><strong>FAQ</strong></Link>
                 </li>
                 <li className="nav-item">
-                  <Link id="creations-link" to="/creations"><strong>Call To Action</strong></Link>
+                  <a href="mailto:contact@imagarena.com?subject=ImagArena Booking Request" target="_blank" id="creations-link"><strong>Book An Event <i className="fa fa-chevron-right"></i></strong></a>
                 </li>
                 {/*<li className="nav-item">
                   <a id="shop-link" href="https://shop.imagarena.com" target="_blank"><i className="fas fa-shopping-cart"></i> Shop</a>
